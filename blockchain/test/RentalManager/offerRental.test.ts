@@ -2,8 +2,9 @@ import { expect } from "chai";
 import { ethers } from "hardhat";
 import { Catalogue, RentalManager, TestToken } from "../../typechain-types";
 import { SignerWithAddress } from "@nomiclabs/hardhat-ethers/signers";
+import { getTestCatalogue } from "./utils";
 
-describe("RentalManager - createRequest", function () {
+describe("RentalManager - offerRental", function () {
     let lib1: SignerWithAddress;
     let lib2: SignerWithAddress;
     let catalogue: Catalogue;
@@ -34,16 +35,11 @@ describe("RentalManager - createRequest", function () {
         );
     });
 
-    it("should allow a user to request a book", async () => {
-        const ISBN = 12039234762;
+    it("should allow a user to offer a rental based on a request", async () => {
+        const ISBN = 1298723874623;
         const quantity = 1;
+        await rentalManager.connect(lib1).createRequest(ISBN, quantity);
 
-        await rentalManager.connect(lib2).createRequest(ISBN, quantity);
-
-        expect(await rentalManager.requestCount()).to.eq(1);
-        const request = await rentalManager.requests(0);
-        expect(request.ISBN).to.eq(ISBN);
-        expect(request.renter).to.eq(lib2.address);
-        expect(request.quantity).to.eq(quantity);
+        // await rentalManager.connect(lib2).offerRental();
     });
 });
