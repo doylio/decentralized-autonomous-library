@@ -45,7 +45,6 @@ contract RentalManager {
     }
 
     function createRequest(uint256 _ISBN, uint256 _amount) external {
-        require(ICatalogue(catalogue).doesBookExist(_ISBN), "Catalogue: book with this ISBN does not exist");
         uint256 requestId = requestCount++;
         requests[requestId] = Request(msg.sender, _ISBN, _amount);
         emit RequestCreated(requestId, msg.sender, _ISBN, _amount);
@@ -61,7 +60,7 @@ contract RentalManager {
         Request memory request = requests[_requestId];
         require(
             ICatalogue(catalogue).balanceOf(msg.sender, request.ISBN) >= _quantity,
-            "RentalManager: not enough books in catalogue"
+            "RentalManager: books not added to catalogue"
         );
         uint256 rentalId = rentalCount++;
         rentals[rentalId] = Rental(_requestId, msg.sender, _quantity, _bond, _fee, RentalStatus.Offered);

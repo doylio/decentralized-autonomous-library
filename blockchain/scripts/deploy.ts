@@ -1,23 +1,51 @@
 import { ethers } from "hardhat";
+import fs from "node:fs";
 
 async function main() {
-  const currentTimestampInSeconds = Math.round(Date.now() / 1000);
-  const ONE_YEAR_IN_SECS = 365 * 24 * 60 * 60;
-  const unlockTime = currentTimestampInSeconds + ONE_YEAR_IN_SECS;
+    const [signer] = await ethers.getSigners();
 
-  const lockedAmount = ethers.utils.parseEther("1");
+    const ERC20Factory = await ethers.getContractFactory("TestToken");
+    const usdc = await ERC20Factory.deploy("Test USDC", "USDC");
+    await usdc.deployed();
 
-  const Lock = await ethers.getContractFactory("Lock");
-  const lock = await Lock.deploy(unlockTime, { value: lockedAmount });
+    await usdc.connect(signer).mint(ethers.utils.parseEther("1000"));
 
-  await lock.deployed();
+    console.log(`USDC Deployed: ${usdc.address}`);
 
-  console.log("Lock with 1 ETH deployed to:", lock.address);
+    const CatalogueFactory = await ethers.getContractFactory("Catalogue");
+    const catalogue = await CatalogueFactory.deploy();
+    await catalogue.deployed();
+
+    console.log(`Catalogue deployed: ${catalogue.address}`);
+
+    const RentalManagerFactory = await ethers.getContractFactory(
+        "RentalManager"
+    );
+    const rentalManager = await RentalManagerFactory.deploy(
+        usdc.address,
+        catalogue.address
+    );
+    await rentalManager.deployed();
+
+    console.log(`RentalFactory deployed: ${rentalManager.address}`);
+
+    fs.writeFileSync(
+        "./deploymentData.json",
+        JSON.stringify(
+            {
+                rentalManager: rentalManager.address,
+                usdc: usdc.address,
+                catalogue: catalogue.address,
+            },
+            null,
+            2
+        )
+    );
 }
 
 // We recommend this pattern to be able to use async/await everywhere
 // and properly handle errors.
 main().catch((error) => {
-  console.error(error);
-  process.exitCode = 1;
+    console.error(error);
+    process.exitCode = 1;
 });
