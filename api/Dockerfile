@@ -7,6 +7,7 @@ WORKDIR /app
 COPY pkg ./pkg
 COPY go.mod ./
 COPY go.sum ./
+COPY books.json ./
 RUN go mod download
 
 COPY *go ./
