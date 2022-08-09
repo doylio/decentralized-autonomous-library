@@ -13,9 +13,13 @@
  
  ## User Stories
  
- ### Library Staff
+ ### Local Library Staff
  
- ### Library Patron
+ ### Local Library Patron
+ 
+ ### Remote Library Staff
+ 
+ ### Remote Library Patron
  
  
  ## Project Reference
