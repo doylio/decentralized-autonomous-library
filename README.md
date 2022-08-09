@@ -6,6 +6,7 @@
  - Using Public Library systems as a point of trust/KYC/privacy for on-chain transactions
  - Integrating with existing ILS systems, in this case Sierra.
  - Querying an existing ILS for membership and item metadata, and using it for on-chain transactions
+ - Tokenize a library item metadata, and transferring it in between two branches, which have their own ethereum address
  
  ## Use Cases
  
