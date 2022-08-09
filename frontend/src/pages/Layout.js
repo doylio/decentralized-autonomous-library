@@ -20,6 +20,9 @@ const Layout = () => {
           <li>
             <Link to="/viewrequests">View Books Requested</Link>
           </li>
+          <li>
+            <Link to="/createrequest">Create Request for Book</Link>
+          </li>
         </ul>
       </nav>
 

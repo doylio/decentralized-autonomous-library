@@ -6,6 +6,7 @@ import InternalSearch from "./pages/InternalSearch";
 import ReturnResults from "./pages/ReturnResults";
 import ViewOffers from "./pages/ViewOffers";
 import ViewRequests from "./pages/ViewRequests";
+import CreateRequest from "./pages/CreateRequest";
 import NoPage from "./pages/NoPage";
 
 
@@ -19,6 +20,7 @@ export default function App() {
           <Route path="returnresults" element={<ReturnResults />} />
           <Route path="viewoffers" element={<ViewOffers />} />
           <Route path="viewrequests" element={<ViewRequests />} />
+          <Route path="createrequest" element={<CreateRequest />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
