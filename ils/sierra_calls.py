@@ -78,30 +78,34 @@ if __name__ == '__main__':
             #verify if the patron exists and get info
             # if doesn't equal flase - write to file
             print(get_patroninfo(patron_url, patron_headers, patron_id))
+
         if sys.argv[1] == 'searchitem':
             if sys.argv[2] == 'title':
-                book_title = sys.argv[3]
-                load_db = open(ils_db, encoding='utf-8')
-                find_book_title = json.load(load_db)
-                    item_list = []
-                with open(ils_db, encoding='utf-8') as item_objects:
-                    item_data = json.load(item_objects)
-                    for item_values in item_data.values():
-                        item_list.append(item_values)
+                title_provided = sys.argv[3]
+                with open(ils_db, encoding='utf-8') as search_title:
+                    find_title = json.load(search_title)
+                    for key in find_title.keys():
+                        title_name = find_title[key]
+                        if title_name['title'] == title_provided:
+                            print(title_name)
 
-                #if book_title in find_book_title:
-                #    print("found booktitle")
-                #print(book_title)
-                #print(find_book_title)
-                #for i in data['emp_details']:
-                    #print(i)
             if sys.argv[2] == 'author':
-                author_name = sys.argv[3]
-                print(author_name)
+                author_provided = sys.argv[3]
+                with open(ils_db, encoding='utf-8') as search_author:
+                    find_author = json.load(search_author)
+                    for key in find_author.keys():
+                        author_name = find_author[key]
+                        if author_name['author'] == author_provided:
+                            print(author_name)
 
             if sys.argv[2] == 'itemno':
-                item_number = sys.argv[3]
-                print(item_number)
+                itemno_provided = sys.argv[3]
+                with open(ils_db, encoding='utf-8') as search_itemno:
+                    find_itemno = json.load(search_itemno)
+                    for key in find_itemno.keys():
+                        item_number = find_itemno[key]
+                        if item_number['barcode'] == itemno_provided:
+                            print(item_number)
 
         if sys.argv[1] == 'checkoutitem':
             checkout_itme = sys.argv[2]
