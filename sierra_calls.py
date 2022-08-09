@@ -25,6 +25,7 @@ if __name__ == '__main__':
     access_token = sierra_auth(sierra_addr, sierra_key, sierra_secret)
     # MAKE SURE WE GET AN OK REPONSE FROM THE SIERRA SERVER
     if access_token != 'BAD_RESPONSE':
+        
         patron_url = patron_session(sierra_addr,access_token)[0] # patron calls made here
         patron_headers = patron_session(sierra_addr,access_token)[1] # headers to make the call to patron api
         patron_id = patron_verify(patron_url, patron_headers, '1234567') 
