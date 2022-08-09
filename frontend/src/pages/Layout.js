@@ -23,6 +23,9 @@ const Layout = () => {
           <li>
             <Link to="/createrequest">Create Request for Book</Link>
           </li>
+          <li>
+            <Link to="/markreturn">Mark a Book as Returned</Link>
+          </li>
         </ul>
       </nav>
 
