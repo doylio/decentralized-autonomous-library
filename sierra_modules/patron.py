@@ -23,3 +23,7 @@ def patron_checkout():
 
 def patron_return():
     return
+
+
+if __name__ == '__main__':
+    print("tests here")
