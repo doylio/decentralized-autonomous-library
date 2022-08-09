@@ -113,6 +113,9 @@ if __name__ == '__main__':
 
         if sys.argv[1] == 'checkinitem':
             print("test")
+        
+        if sys.argv[1] == 'transferitem':
+            print("test")
     else:
         print('COULDN\'T AUTHENTICATE')
         print(access_token)

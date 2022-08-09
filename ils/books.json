@@ -2,7 +2,7 @@
   "1001745": {
     "id": "1001745",
     "location": "BFBeQ",
-    "status_codes": "REQUEST",
+    "status_codes": "AVAILABLE",
     "barcode": "30890331224474",
     "title": "Mastering Bitcoin",
     "author": "Andreas A"
@@ -18,7 +18,7 @@
   "1157937": {
     "id": "1157937",
     "location": "EnuGX",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "83059152817563",
     "title": "Zen & The Art of Motorcycle Maintenance",
     "author": "Lorine Boehm"
@@ -34,7 +34,7 @@
   "1168121": {
     "id": "1168121",
     "location": "HexVK",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "05507462918920",
     "title": "Cathedral and the Bazaar, The",
     "author": "Orie Hahn"
@@ -42,7 +42,7 @@
   "1169478": {
     "id": "1169478",
     "location": "jGXYm",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "52930684986777",
     "title": "Journal of Economics, vol 106 No 3",
     "author": "Anita MacGyver"
@@ -50,7 +50,7 @@
   "1194657": {
     "id": "1194657",
     "location": "FRqSt",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "60915059127635",
     "title": "Down and Out in Paris & London",
     "author": "Luis Mills"
@@ -58,7 +58,7 @@
   "1309069": {
     "id": "1309069",
     "location": "LeCTq",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "78349635021246",
     "title": "Burning Bright",
     "author": "Constantin Fadel"
@@ -66,7 +66,7 @@
   "1370662": {
     "id": "1370662",
     "location": "YvVmV",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "67458285278201",
     "title": "Deceiver, The",
     "author": "Yessenia Paucek"
@@ -74,7 +74,7 @@
   "1452205": {
     "id": "1452205",
     "location": "EqIoS",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "32289286968718",
     "title": "20000 Leagues Under the Sea",
     "author": "Moshe Sawayn"
@@ -82,7 +82,7 @@
   "1455578": {
     "id": "1455578",
     "location": "bjBpe",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "12303808081462",
     "title": "Aghal Paghal",
     "author": "Karina Sawayn"
@@ -90,7 +90,7 @@
   "1509521": {
     "id": "1509521",
     "location": "vosRM",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "59500200908892",
     "title": "We the Living",
     "author": "Ulices Pfeffer"
@@ -106,7 +106,7 @@
   "1614966": {
     "id": "1614966",
     "location": "ZPGPq",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "44374244323198",
     "title": "Hafasavnuk",
     "author": "Estevan Spinka"
@@ -122,7 +122,7 @@
   "1708164": {
     "id": "1708164",
     "location": "GxxvA",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "22633150147225",
     "title": "More Tears to Cry",
     "author": "Kenny Volkman"
@@ -130,7 +130,7 @@
   "1741833": {
     "id": "1741833",
     "location": "sqjoh",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "89111073911144",
     "title": "Freedom at Midnight",
     "author": "Larry Corkery"
@@ -138,7 +138,7 @@
   "1751763": {
     "id": "1751763",
     "location": "GbkcT",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "25384541331216",
     "title": "Birth of a Theorem",
     "author": "Joy Kling"
@@ -162,7 +162,7 @@
   "2080988": {
     "id": "2080988",
     "location": "iVoVP",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "46782946033398",
     "title": "Idea of Justice, The",
     "author": "Lucious Gorczany"
@@ -170,7 +170,7 @@
   "2139106": {
     "id": "2139106",
     "location": "GrwAP",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "05213043852148",
     "title": "Doctor in the Nude",
     "author": "Lola Bernier"
@@ -178,7 +178,7 @@
   "2209034": {
     "id": "2209034",
     "location": "LMjmD",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "10997030466286",
     "title": "Empire of the Mughal - Raiders from the North",
     "author": "Aurelie O'Conner"
@@ -186,7 +186,7 @@
   "2272712": {
     "id": "2272712",
     "location": "KXXaQ",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "02041020976297",
     "title": "Empire of the Mughal - Ruler of the World",
     "author": "Donavon Hartmann"
@@ -202,7 +202,7 @@
   "2353754": {
     "id": "2353754",
     "location": "JVgYT",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "17878239122596",
     "title": "One",
     "author": "Samanta Okuneva"
@@ -218,7 +218,7 @@
   "2376411": {
     "id": "2376411",
     "location": "HkjfE",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "52065332310427",
     "title": "Hunchback of Notre Dame, The",
     "author": "Flavie Roob"
@@ -234,7 +234,7 @@
   "2546363": {
     "id": "2546363",
     "location": "vsfgz",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "09170333454784",
     "title": "Principles of Communication Systems",
     "author": "Roel Bergnaum"
@@ -242,7 +242,7 @@
   "2659466": {
     "id": "2659466",
     "location": "gxCAr",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "11144878567910",
     "title": "From Beirut to Jerusalem",
     "author": "Jada Cruickshank"
@@ -250,7 +250,7 @@
   "2680005": {
     "id": "2680005",
     "location": "MfyZR",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "92428174642492",
     "title": "Jim Corbett Omnibus",
     "author": "Ottis Jaskolski"
@@ -274,7 +274,7 @@
   "2754966": {
     "id": "2754966",
     "location": "BxCHR",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "45474360956972",
     "title": "Batman: The Long Halloween",
     "author": "Jannie Grady"
@@ -282,7 +282,7 @@
   "2769647": {
     "id": "2769647",
     "location": "jaBUl",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "22287117712715",
     "title": "New Machiavelli, The",
     "author": "Talon Wunsch"
@@ -290,7 +290,7 @@
   "2785758": {
     "id": "2785758",
     "location": "tHtrp",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "24891777736145",
     "title": "Clash of Civilizations and Remaking of the World Order",
     "author": "Ricardo Turcotte"
@@ -314,7 +314,7 @@
   "2913762": {
     "id": "2913762",
     "location": "FMGnc",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "74068361042260",
     "title": "Last Mughal, The",
     "author": "Lester Jast"
@@ -330,7 +330,7 @@
   "2996967": {
     "id": "2996967",
     "location": "ntPld",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "71337253655766",
     "title": "Machine Learning for Hackers",
     "author": "Raleigh Beatty"
@@ -338,7 +338,7 @@
   "3060178": {
     "id": "3060178",
     "location": "bkEfP",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "39528843672181",
     "title": "Attorney, The",
     "author": "Makenna Gottlieb"
@@ -346,7 +346,7 @@
   "3077530": {
     "id": "3077530",
     "location": "WihOH",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "35100293998607",
     "title": "Trembling of a Leaf, The",
     "author": "Jimmie Little"
@@ -354,7 +354,7 @@
   "3211203": {
     "id": "3211203",
     "location": "jdctG",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "99014904708019",
     "title": "Discovery of India, The",
     "author": "William Rutherford"
@@ -362,7 +362,7 @@
   "3258219": {
     "id": "3258219",
     "location": "iXGcH",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "53470698228720",
     "title": "Data Structures Using C & C++",
     "author": "Charles Wolff"
@@ -370,7 +370,7 @@
   "3277084": {
     "id": "3277084",
     "location": "WOigM",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "14159439414770",
     "title": "Think Complexity",
     "author": "Mario Simonis"
@@ -386,7 +386,7 @@
   "3514059": {
     "id": "3514059",
     "location": "QXpTQ",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "62973881271409",
     "title": "Case of the Lame Canary, The",
     "author": "Wendell Barrows"
@@ -394,7 +394,7 @@
   "3550761": {
     "id": "3550761",
     "location": "SHkKj",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "07559012563858",
     "title": "Russian Journal, A",
     "author": "Mireya Mosciski"
@@ -402,7 +402,7 @@
   "3607505": {
     "id": "3607505",
     "location": "zOXQn",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "05681039121089",
     "title": "To Sir With Love",
     "author": "Addie Koepp"
@@ -410,7 +410,7 @@
   "3617145": {
     "id": "3617145",
     "location": "WLSEn",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "16559568042775",
     "title": "Structure & Interpretation of Computer Programs",
     "author": "Jermain Emmerich"
@@ -418,7 +418,7 @@
   "3690936": {
     "id": "3690936",
     "location": "DVCOu",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "19431902503328",
     "title": "Pattern Classification",
     "author": "Candelario Jacobs"
@@ -434,7 +434,7 @@
   "3894492": {
     "id": "3894492",
     "location": "TzULn",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "45444615810695",
     "title": "Code Book, The",
     "author": "Martina Murazik"
@@ -442,7 +442,7 @@
   "3929240": {
     "id": "3929240",
     "location": "VQItB",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "84544017810820",
     "title": "Killing Joke, The",
     "author": "Immanuel Jakubowski"
@@ -458,7 +458,7 @@
   "4021624": {
     "id": "4021624",
     "location": "RbSno",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "62823303344556",
     "title": "Complete Sherlock Holmes, The - Vol II",
     "author": "Eldora Connelly"
@@ -466,7 +466,7 @@
   "4039751": {
     "id": "4039751",
     "location": "gdlmb",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "28602272057359",
     "title": "City of Djinns",
     "author": "Jose Lehner"
@@ -474,7 +474,7 @@
   "4045484": {
     "id": "4045484",
     "location": "vhPkc",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "01817802285502",
     "title": "Beyond the Three Seas",
     "author": "Myah Hoppe"
@@ -482,7 +482,7 @@
   "4047068": {
     "id": "4047068",
     "location": "JUEfj",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "95013893469494",
     "title": "Power Electronics - Rashid",
     "author": "Torey Pouros"
@@ -506,7 +506,7 @@
   "4275589": {
     "id": "4275589",
     "location": "vAMlc",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "73128322215967",
     "title": "Freakonomics",
     "author": "Antwan Larson"
@@ -522,7 +522,7 @@
   "4279039": {
     "id": "4279039",
     "location": "NvtbI",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "77503693723203",
     "title": "Ashenden of The British Agent",
     "author": "Odell Beahan"
@@ -530,7 +530,7 @@
   "4288493": {
     "id": "4288493",
     "location": "usgce",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "73984870589335",
     "title": "Gun Gayin Awadi",
     "author": "Oceane Cronin"
@@ -538,7 +538,7 @@
   "4335386": {
     "id": "4335386",
     "location": "ZvLNs",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "58645256988232",
     "title": "Flashpoint",
     "author": "Mohammad Langosh"
@@ -546,7 +546,7 @@
   "4359793": {
     "id": "4359793",
     "location": "qjbPF",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "13354949750955",
     "title": "Signal and the Noise, The",
     "author": "Hillary Kshlerin"
@@ -570,7 +570,7 @@
   "4518262": {
     "id": "4518262",
     "location": "ZVLNp",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "90283611661496",
     "title": "Maugham's Collected Short Stories, Vol 3",
     "author": "Demond Gerlach"
@@ -586,7 +586,7 @@
   "4573124": {
     "id": "4573124",
     "location": "UyEdF",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "78017490876671",
     "title": "Girl who kicked the Hornet's Nest",
     "author": "Dustin Altenwerth"
@@ -594,7 +594,7 @@
   "4603106": {
     "id": "4603106",
     "location": "sNyth",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "95185454469650",
     "title": "Life in Letters, A",
     "author": "Andre Kozey"
@@ -602,7 +602,7 @@
   "4621572": {
     "id": "4621572",
     "location": "ZPcCK",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "04136065920935",
     "title": "Vyakti ani Valli",
     "author": "Roy Sauer"
@@ -618,7 +618,7 @@
   "4696300": {
     "id": "4696300",
     "location": "IpDDs",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "63191838777200",
     "title": "Rationality & Freedom",
     "author": "Marian Robel"
@@ -626,7 +626,7 @@
   "4829746": {
     "id": "4829746",
     "location": "nsRha",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "84015473936896",
     "title": "History of Western Philosophy",
     "author": "Catherine Ruecker"
@@ -634,7 +634,7 @@
   "4856452": {
     "id": "4856452",
     "location": "eFofO",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "46996436479872",
     "title": "Radiowaril Bhashane & Shrutika",
     "author": "Neoma Marquardt"
@@ -650,7 +650,7 @@
   "4909974": {
     "id": "4909974",
     "location": "PSCZr",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "40502517869351",
     "title": "God Created the Integers",
     "author": "Valentina Kuhic"
@@ -674,7 +674,7 @@
   "5066337": {
     "id": "5066337",
     "location": "YUGhE",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "57450433913565",
     "title": "Winter of Our Discontent, The",
     "author": "Blanche Kunze"
@@ -682,7 +682,7 @@
   "5094633": {
     "id": "5094633",
     "location": "nprGj",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "22373716586416",
     "title": "Drunkard's Walk, The",
     "author": "Benton Legros"
@@ -690,7 +690,7 @@
   "5277156": {
     "id": "5277156",
     "location": "LWgqS",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "36209456397285",
     "title": "Philosophy: Who Needs It",
     "author": "Conor O'Connell"
@@ -698,7 +698,7 @@
   "5322024": {
     "id": "5322024",
     "location": "llPqC",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "75528168768737",
     "title": "Idiot, The",
     "author": "Daphney Mraz"
@@ -706,7 +706,7 @@
   "5438978": {
     "id": "5438978",
     "location": "wUKpS",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "95924688676715",
     "title": "Apulki",
     "author": "Justina Beier"
@@ -746,7 +746,7 @@
   "5800082": {
     "id": "5800082",
     "location": "RvBoS",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "14482058572265",
     "title": "Selected Short Stories",
     "author": "Aglae Stanton"
@@ -754,7 +754,7 @@
   "5881435": {
     "id": "5881435",
     "location": "qLeCV",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "15220525119613",
     "title": "Artist and the Mathematician, The",
     "author": "Lois Fisher"
@@ -762,7 +762,7 @@
   "5894299": {
     "id": "5894299",
     "location": "MLrOG",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "07904799400879",
     "title": "Data Analysis with Open Source Tools",
     "author": "Rossie Hane"
@@ -770,7 +770,7 @@
   "5895506": {
     "id": "5895506",
     "location": "jrsOl",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "69398735700933",
     "title": "Data Scientists at Work",
     "author": "Glen Schinner"
@@ -778,7 +778,7 @@
   "5984580": {
     "id": "5984580",
     "location": "DahrK",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "78831415502599",
     "title": "Arthashastra, The",
     "author": "Shirley Stokes"
@@ -794,7 +794,7 @@
   "6093921": {
     "id": "6093921",
     "location": "dchJd",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "34483228509647",
     "title": "Bookless in Baghdad",
     "author": "Elian Leffler"
@@ -802,7 +802,7 @@
   "6129140": {
     "id": "6129140",
     "location": "HxorY",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "65636286655437",
     "title": "Beautiful and the Damned, The",
     "author": "Guido Cole"
@@ -810,7 +810,7 @@
   "6134427": {
     "id": "6134427",
     "location": "KgcAa",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "90028358456046",
     "title": "Numbers Behind Numb3rs, The",
     "author": "Foster Hauck"
@@ -818,7 +818,7 @@
   "6143953": {
     "id": "6143953",
     "location": "jknKN",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "04440562708886",
     "title": "Crime and Punishment",
     "author": "Darrel Grant"
@@ -826,7 +826,7 @@
   "6218385": {
     "id": "6218385",
     "location": "rXhva",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "59408699464541",
     "title": "Surely You're Joking Mr Feynman",
     "author": "Shana Oberbrunner"
@@ -842,7 +842,7 @@
   "6266504": {
     "id": "6266504",
     "location": "CofVl",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "73919078167554",
     "title": "Last Lecture, The",
     "author": "Lemuel Mayer"
@@ -850,7 +850,7 @@
   "6335149": {
     "id": "6335149",
     "location": "eQNqg",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "64957321557946",
     "title": "Fundamentals of Wavelets",
     "author": "Hassie Johnston"
@@ -858,7 +858,7 @@
   "6357864": {
     "id": "6357864",
     "location": "TgLKU",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "05131451075860",
     "title": "Broca's Brain",
     "author": "Willow Huel"
@@ -874,7 +874,7 @@
   "6402394": {
     "id": "6402394",
     "location": "lfttw",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "13202475282383",
     "title": "Information, The",
     "author": "Denis Gleason"
@@ -882,7 +882,7 @@
   "6482433": {
     "id": "6482433",
     "location": "HBBlZ",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "03594438791107",
     "title": "False Impressions",
     "author": "Moises Hagenes"
@@ -890,7 +890,7 @@
   "6533918": {
     "id": "6533918",
     "location": "LqNbD",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "22873723998011",
     "title": "Courtroom Genius, The",
     "author": "Lillie West"
@@ -898,7 +898,7 @@
   "6745580": {
     "id": "6745580",
     "location": "yOKMX",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "61072837695242",
     "title": "Veil: Secret Wars of the CIA",
     "author": "Grant Goldner"
@@ -914,7 +914,7 @@
   "6823516": {
     "id": "6823516",
     "location": "PcNxq",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "65274266339692",
     "title": "World's Greatest Short Stories, The",
     "author": "Cecilia Will"
@@ -938,7 +938,7 @@
   "6943277": {
     "id": "6943277",
     "location": "KLaXM",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "49654292793421",
     "title": "Slaughterhouse Five",
     "author": "Wyman Moore"
@@ -946,7 +946,7 @@
   "6981947": {
     "id": "6981947",
     "location": "boCuE",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "73638093398111",
     "title": "Short History of the World, A",
     "author": "Candido Douglas"
@@ -962,7 +962,7 @@
   "7081338": {
     "id": "7081338",
     "location": "ZfKcf",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "41945564555905",
     "title": "Statistical Decision Theory'",
     "author": "Shanna Blanda"
@@ -970,7 +970,7 @@
   "7168540": {
     "id": "7168540",
     "location": "hCdph",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "97693579046259",
     "title": "Complete Mastermind, The",
     "author": "Julien Swaniawski"
@@ -978,7 +978,7 @@
   "7225464": {
     "id": "7225464",
     "location": "xyXCB",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "20164939934200",
     "title": "Hidden Connections, The",
     "author": "Elfrieda McClure"
@@ -986,7 +986,7 @@
   "7281978": {
     "id": "7281978",
     "location": "SfUMd",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "03999809892541",
     "title": "Neural Networks",
     "author": "Lexie Kutch"
@@ -994,7 +994,7 @@
   "7359923": {
     "id": "7359923",
     "location": "tPOZB",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "74377378221119",
     "title": "Raisin in the Sun, A",
     "author": "Danika Moore"
@@ -1002,7 +1002,7 @@
   "7374985": {
     "id": "7374985",
     "location": "sQCwc",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "65686855196687",
     "title": "Doctor on the Brain",
     "author": "Jamar Stanton"
@@ -1026,7 +1026,7 @@
   "7547996": {
     "id": "7547996",
     "location": "MXSEC",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "48996503590195",
     "title": "Data Mining Handbook",
     "author": "Percival Frami"
@@ -1034,7 +1034,7 @@
   "7579147": {
     "id": "7579147",
     "location": "dBgfc",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "20180692616925",
     "title": "Image Processing & Mathematical Morphology",
     "author": "Jordan Gutmann"
@@ -1050,7 +1050,7 @@
   "7596541": {
     "id": "7596541",
     "location": "whkUe",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "93648613748169",
     "title": "Pointers in C",
     "author": "Lucienne Dibbert"
@@ -1066,7 +1066,7 @@
   "7881344": {
     "id": "7881344",
     "location": "pamWW",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "32653651930967",
     "title": "Urlasurla",
     "author": "Nelle Bailey"
@@ -1074,7 +1074,7 @@
   "7905122": {
     "id": "7905122",
     "location": "jQuES",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "32024858571581",
     "title": "Death of Superman, The",
     "author": "Karley Bins"
@@ -1082,7 +1082,7 @@
   "7913229": {
     "id": "7913229",
     "location": "Ckduf",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "76879301076475",
     "title": "Sea of Poppies",
     "author": "Coty Pacocha"
@@ -1098,7 +1098,7 @@
   "7940947": {
     "id": "7940947",
     "location": "EIsRw",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "65465512084490",
     "title": "Learning OpenCV",
     "author": "Filomena Halvorson"
@@ -1106,7 +1106,7 @@
   "8046333": {
     "id": "8046333",
     "location": "wsyDx",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "88967766929903",
     "title": "Let Us C",
     "author": "Leonor Howell"
@@ -1114,7 +1114,7 @@
   "8052240": {
     "id": "8052240",
     "location": "MFwaP",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "79990417505103",
     "title": "India from Midnight to Milennium",
     "author": "Mackenzie Breitenberg"
@@ -1122,7 +1122,7 @@
   "8192992": {
     "id": "8192992",
     "location": "VTREX",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "28351193287003",
     "title": "Free Will",
     "author": "Vivianne Wunsch"
@@ -1130,7 +1130,7 @@
   "8291817": {
     "id": "8291817",
     "location": "jBeoJ",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "25353206060114",
     "title": "Textbook of Economic Theory",
     "author": "Elsa Lindgren"
@@ -1146,7 +1146,7 @@
   "8390542": {
     "id": "8390542",
     "location": "BseUD",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "67133228766692",
     "title": "Design with OpAmps",
     "author": "Deonte Stracke"
@@ -1154,7 +1154,7 @@
   "8394072": {
     "id": "8394072",
     "location": "gpNln",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "89185623994911",
     "title": "How to Think Like Sherlock Holmes",
     "author": "Abe Runte"
@@ -1162,7 +1162,7 @@
   "8411256": {
     "id": "8411256",
     "location": "gtMmF",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "27726290020217",
     "title": "Char Shabda",
     "author": "Declan Champlin"
@@ -1170,7 +1170,7 @@
   "8446746": {
     "id": "8446746",
     "location": "ZmfSt",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "92033204730190",
     "title": "Making Software",
     "author": "Damon Bradtke"
@@ -1178,7 +1178,7 @@
   "8477390": {
     "id": "8477390",
     "location": "quJfH",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "64954085119983",
     "title": "Moon and Sixpence, The",
     "author": "Else Johnson"
@@ -1186,7 +1186,7 @@
   "8585413": {
     "id": "8585413",
     "location": "fUBHS",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "07222463481430",
     "title": "Great Indian Novel, The",
     "author": "Alanna Swift"
@@ -1194,7 +1194,7 @@
   "8627609": {
     "id": "8627609",
     "location": "xJqBj",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "99447150097152",
     "title": "Half A Life",
     "author": "Jasmin DuBuque"
@@ -1210,7 +1210,7 @@
   "8680005": {
     "id": "8680005",
     "location": "njzbN",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "08697899254520",
     "title": "Asami Asami",
     "author": "Maria Bahringer"
@@ -1226,7 +1226,7 @@
   "8773135": {
     "id": "8773135",
     "location": "iggzm",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "66411082850159",
     "title": "Tao of Physics, The",
     "author": "Deonte Kshlerin"
@@ -1234,7 +1234,7 @@
   "8854900": {
     "id": "8854900",
     "location": "mWkVE",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "86954513807367",
     "title": "Superman Earth One - 1",
     "author": "Alyce Parker"
@@ -1242,7 +1242,7 @@
   "8880251": {
     "id": "8880251",
     "location": "yxuuG",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "96346637321722",
     "title": "History of England, Foundation",
     "author": "Delphine Spencer"
@@ -1250,7 +1250,7 @@
   "8891326": {
     "id": "8891326",
     "location": "wzjYR",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "74786600010925",
     "title": "History of the DC Universe",
     "author": "Teresa Mohr"
@@ -1274,7 +1274,7 @@
   "9000384": {
     "id": "9000384",
     "location": "VBWQJ",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "51429817926425",
     "title": "Ropemaker, The",
     "author": "Erling Kautzer"
@@ -1290,7 +1290,7 @@
   "9060343": {
     "id": "9060343",
     "location": "YetLr",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "60093107281107",
     "title": "Prince, The",
     "author": "Margaret Ondricka"
@@ -1306,7 +1306,7 @@
   "9087044": {
     "id": "9087044",
     "location": "JRKeS",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "92310326211216",
     "title": "Grapes of Wrath, The",
     "author": "Ceasar Leannon"
@@ -1314,7 +1314,7 @@
   "9133105": {
     "id": "9133105",
     "location": "lecqA",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "46682149777591",
     "title": "Farewell to Arms, A",
     "author": "Darrell Gutmann"
@@ -1322,7 +1322,7 @@
   "9166036": {
     "id": "9166036",
     "location": "pHZVB",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "15019952060523",
     "title": "Political Philosophers",
     "author": "Kaitlyn Grady"
@@ -1330,7 +1330,7 @@
   "9245160": {
     "id": "9245160",
     "location": "DqrTO",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "72440750553222",
     "title": "All the President's Men",
     "author": "Sammie Gulgowski"
@@ -1346,7 +1346,7 @@
   "9277433": {
     "id": "9277433",
     "location": "DbvwK",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "96279755970866",
     "title": "Introduction to Algorithms",
     "author": "Elinore Wiegand"
@@ -1354,7 +1354,7 @@
   "9318474": {
     "id": "9318474",
     "location": "mlTRD",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "15673550696222",
     "title": "Eyeless in Gaza",
     "author": "Quinn Casper"
@@ -1362,7 +1362,7 @@
   "9358917": {
     "id": "9358917",
     "location": "XYCQK",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "02369482797103",
     "title": "Image Processing with MATLAB",
     "author": "Curt Harvey"
@@ -1370,7 +1370,7 @@
   "9395082": {
     "id": "9395082",
     "location": "iOtqz",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "80928719550679",
     "title": "Age of the Warrior, The",
     "author": "America Sanford"
@@ -1386,7 +1386,7 @@
   "9519417": {
     "id": "9519417",
     "location": "nQmam",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "79270877366135",
     "title": "Manasa",
     "author": "Brian Kuhn"
@@ -1402,7 +1402,7 @@
   "9639079": {
     "id": "9639079",
     "location": "bcEtB",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "47901768859611",
     "title": "Statistical Learning Theory",
     "author": "Gardner Gaylord"
@@ -1410,7 +1410,7 @@
   "9673768": {
     "id": "9673768",
     "location": "XrFFr",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "90792263551477",
     "title": "Superman Earth One - 2",
     "author": "Rasheed Nitzsche"
@@ -1418,7 +1418,7 @@
   "9723027": {
     "id": "9723027",
     "location": "rUArr",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "55253562064893",
     "title": "Unpopular Essays",
     "author": "Brannon Moen"
@@ -1426,7 +1426,7 @@
   "9772401": {
     "id": "9772401",
     "location": "YPQie",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "99160029547599",
     "title": "Tales of Mystery and Imagination",
     "author": "Marcelo Kuhlman"
@@ -1434,7 +1434,7 @@
   "9776178": {
     "id": "9776178",
     "location": "VxjUy",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "24124745711319",
     "title": "Empire of the Mughal - The Tainted Throne",
     "author": "Manuela Nikolaus"
@@ -1442,7 +1442,7 @@
   "9815128": {
     "id": "9815128",
     "location": "taQGv",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "91526700535242",
     "title": "Nature of Statistical Learning Theory, The",
     "author": "Sven Purdy"
@@ -1450,7 +1450,7 @@
   "9865637": {
     "id": "9865637",
     "location": "EoYks",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "10914840748907",
     "title": "Girl with the Dragon Tattoo",
     "author": "Elvis Bogisich"
@@ -1466,7 +1466,7 @@
   "9936706": {
     "id": "9936706",
     "location": "rotQi",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "83959232883615",
     "title": "Argumentative Indian, The",
     "author": "Chelsie Schneider"
@@ -1474,7 +1474,7 @@
   "9951985": {
     "id": "9951985",
     "location": "qhpiz",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "15011410093033",
     "title": "In a Free State",
     "author": "Francesco Schneider"
@@ -1506,7 +1506,7 @@
   "0296406": {
     "id": "0296406",
     "location": "BeFRu",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "63428973178422",
     "title": "Trial, The",
     "author": "Kasandra Metz"
@@ -1514,7 +1514,7 @@
   "0484809": {
     "id": "0484809",
     "location": "PlHTJ",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "58519971272205",
     "title": "Python for Data Analysis",
     "author": "Barbara Konopelski"
@@ -1522,7 +1522,7 @@
   "0333798": {
     "id": "0333798",
     "location": "ENrsW",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "08775523993798",
     "title": "Pillars of the Earth, The",
     "author": "Kristian Abbott"
@@ -1530,7 +1530,7 @@
   "0569506": {
     "id": "0569506",
     "location": "eVwIm",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "28896798004024",
     "title": "Return of the Primitive",
     "author": "Modesta Nitzsche"
@@ -1538,7 +1538,7 @@
   "0871722": {
     "id": "0871722",
     "location": "evNoQ",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "95009565106997",
     "title": "Once There Was a War",
     "author": "Kaela Ernser"
@@ -1554,7 +1554,7 @@
   "0640533": {
     "id": "0640533",
     "location": "qYWsv",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "63601801958490",
     "title": "Prisoner of Birth, A",
     "author": "Zena Kuphal"
@@ -1562,7 +1562,7 @@
   "0548094": {
     "id": "0548094",
     "location": "SyJhw",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "41807988672592",
     "title": "Scoop!",
     "author": "Sydni Parisian"
@@ -1570,7 +1570,7 @@
   "0598090": {
     "id": "0598090",
     "location": "EypLt",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "85261934043738",
     "title": "Maqta-e-Ghalib",
     "author": "Cooper Greenfelder"
@@ -1578,7 +1578,7 @@
   "0868082": {
     "id": "0868082",
     "location": "iEaUL",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "20695030546746",
     "title": "Beyond Degrees",
     "author": "Emmy Nader"
@@ -1586,7 +1586,7 @@
   "0588066": {
     "id": "0588066",
     "location": "NOPzb",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "21459360726878",
     "title": "On Education",
     "author": "Vickie Walker"
@@ -1610,7 +1610,7 @@
   "0610836": {
     "id": "0610836",
     "location": "SEqki",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "12147166307807",
     "title": "Simpsons & Their Mathematical Secrets",
     "author": "Vincenzo Aufderhar"
@@ -1618,7 +1618,7 @@
   "0931984": {
     "id": "0931984",
     "location": "hAlyP",
-    "status_codes": "MISSING",
+    "status_codes": "INTRANSIT",
     "barcode": "45586119197969",
     "title": "Justice League: Throne of Atlantis",
     "author": "Carley Swaniawski"
@@ -1650,7 +1650,7 @@
   "0732012": {
     "id": "0732012",
     "location": "PuWjV",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "09754048126038",
     "title": "World's Great Thinkers, The",
     "author": "Imelda Heaney"
@@ -1666,7 +1666,7 @@
   "0836410": {
     "id": "0836410",
     "location": "Qimvi",
-    "status_codes": "REQUEST",
+    "status_codes": "SIGNEDOUT",
     "barcode": "26570329931512",
     "title": "Murphy's Law",
     "author": "Franco Johnson"
