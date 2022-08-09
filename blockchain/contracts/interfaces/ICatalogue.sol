@@ -5,6 +5,7 @@ import "@openzeppelin/contracts/token/ERC1155/IERC1155.sol";
 
 interface ICatalogue is IERC1155 {
     function names(uint256 _ISBN) external view returns (string memory);
+
     function authors(uint256 _ISBN) external view returns (string memory);
 
     function createAndSupplyBooks(
