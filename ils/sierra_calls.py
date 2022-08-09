@@ -10,18 +10,6 @@ from auth import sierra_auth
 from patron import patron_session, patron_verify
 from item import item_session
 
-def create_ilsitem(new_id, location_id, status_code, bar_code, item_title, author_title):
-
-    return
-
-def search_itemno():
-    return
-
-def search_author():
-    return
-
-def search_title():
-    return
 
 def get_patroninfo(patron_urls, patron_header, patron_ids):
     '''
@@ -76,6 +64,7 @@ if __name__ == '__main__':
         if sys.argv[1] == 'searchitem':
             if sys.argv[2] == 'title':
                 title_provided = sys.argv[3]
+                search_titles(ils_db, title_provided)
                 with open(ils_db, encoding='utf-8') as search_title:
                     find_title = json.load(search_title)
                     for key in find_title.keys():
