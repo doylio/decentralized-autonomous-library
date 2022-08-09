@@ -7,6 +7,7 @@
  - Integrating with existing ILS systems, in this case Sierra.
  - Querying an existing ILS for membership and item metadata, and using it for on-chain transactions
  - Tokenize a library item metadata, and transferring it in between two branches, which have their own ethereum address
+ - Record item metadata on chain, to be queried by other libraries running this application
  
  ## Use Cases
  
