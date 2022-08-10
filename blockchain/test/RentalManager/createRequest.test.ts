@@ -19,7 +19,7 @@ describe("RentalManager - createRequest", function () {
         await catalogue.deployed();
 
         const TokenFactory = await ethers.getContractFactory("TestToken");
-        usdc = await TokenFactory.deploy();
+        usdc = await TokenFactory.deploy("Test USDC", "USDC");
         await usdc.deployed();
 
         await usdc.connect(lib1).mint(1000);
