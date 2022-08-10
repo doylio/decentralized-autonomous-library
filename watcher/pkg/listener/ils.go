@@ -1,13 +1,13 @@
 package listener
 
 import (
+	"bytes"
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
 	"log"
 	"math/big"
 	"net/http"
-	"net/url"
 
 	"github.com/ethereum/go-ethereum/common"
 )
@@ -37,30 +37,33 @@ func getBook(ils_url string, isbn string) []byte {
 	return body
 }
 
-func postBook(ils_url string, book []byte) {
-	isbn := "4909974"
+func postBook(ils_url string, b []byte) {
+	isbn := "6134427"
 	getBook(ils_url, isbn)
 
 	var jsonMap map[string]string
-	json.Unmarshal(book, &jsonMap)
-	// fmt.Println(jsonMap)
-	// fmt.Println(jsonMap["id"])
+	json.Unmarshal(b, &jsonMap)
+	// // fmt.Println(jsonMap)
+	// // fmt.Println(jsonMap["id"])
 
-	data := url.Values{
-		"id":           {jsonMap["id"]},
-		"location":     {jsonMap["location"]},
-		"status_codes": {jsonMap["status_codes"]},
-		"barcode":      {jsonMap["barcode"]},
-		"title":        {jsonMap["title"]},
-		"author":       {jsonMap["author"]},
-	}
-	fmt.Println(data)
+	// data := url.Values{
+	// 	"id":           {jsonMap["id"]},
+	// 	"location":     {jsonMap["location"]},
+	// 	"status_codes": {jsonMap["status_codes"]},
+	// 	"barcode":      {jsonMap["barcode"]},
+	// 	"title":        {jsonMap["title"]},
+	// 	"author":       {jsonMap["author"]},
+	// }
+
+	// fmt.Println(data)
 
 	// data := url.Values{
 	// 	"book": {string(book)},
 	// }
-	resp, err := http.PostForm(ils_url+"/postBook", data)
 
+	resp, err := http.Post(ils_url+"/postBook", "application/json", bytes.NewBuffer(b))
+	// resp, err := http.NewRequest("POST", ils_url+"/postBook", bytes.NewBuffer(b))
+	resp.Header.Set("Content-Type", "application/json")
 	if err != nil {
 		log.Fatal(err)
 	}

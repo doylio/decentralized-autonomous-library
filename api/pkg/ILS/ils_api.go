@@ -2,11 +2,12 @@ package ILS
 
 import (
 	"encoding/json"
+	"fmt"
 	"io/ioutil"
 	"log"
 	"net/http"
 	"os"
-	"fmt"
+
 	"github.com/gin-gonic/gin"
 )
 
@@ -75,18 +76,15 @@ func getBookByID(books map[string]book) gin.HandlerFunc {
 
 // postBook adds a book from JSON received in the request body
 func postBook(books map[string]book) gin.HandlerFunc {
-	fn := func(c *gin.Context) {		
+	fn := func(c *gin.Context) {
 		var b = c.Param("book")
 		fmt.Println(b)
 		newBook := book{}
 		x, _ := ioutil.ReadAll(c.Request.Body)
-		
-		json.Unmarshal([]byte(b), &newBook)
+		fmt.Println("X: ", x)
+		json.Unmarshal(x, &newBook)
 		fmt.Println(newBook)
 		// Call BindJSON to bind the recieved json to newBook
-		if err := c.BindJSON(&newBook); err != nil {
-			return
-		}
 
 		// Add the new book to the slice
 		books[newBook.ID] = newBook
@@ -139,7 +137,7 @@ func StartAPI(port string, fname string) {
 	router.GET("/bookByID/:id", getBookByID(books))
 	// router.GET("/bookByAuthor/:author", getBookByAuther)
 	// router.GET("/bookByBarcode/:barcode", getBookByBarcode)
-	router.POST("/books", postBook(books))
+	router.POST("/postBook", postBook(books))
 
 	go router.Run("localhost:" + port)
 }

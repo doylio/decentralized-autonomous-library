@@ -18,7 +18,7 @@ async function main() {
         ethers.provider
     );
 
-    const ISBN = 3762230;
+    const ISBN = 6134427;
     const name = "NAME";
     const author = "AUTHOR";
     const bond = ethers.utils.parseEther("10");
