@@ -1,23 +1,22 @@
 package main
 
 import (
-	"log"
+	"sync"
 	"watcher/pkg/listener"
-
-	"github.com/ethereum/go-ethereum/ethclient"
 )
 
-type State struct {
-}
+var RPC_URL = "https://stardust.metis.io/?owner=588"
 
 func main() {
-	client, e := ethclient.Dial("https://stardust.metis.io/?owner=588")
-	if e != nil {
-		log.Fatal(e)
-	}
 
-	e = listener.Historical_Filter(client)
-	if e != nil {
-		log.Fatal(e)
-	}
+	s := listener.State{}
+	s.RentalsAccepted = make(map[string]listener.RentalAccepted)
+	s.RentalsCreated = make(map[string]listener.RentalCreated)
+	s.RequestsCreated = make(map[string]listener.RequestCreated)
+
+	var wg sync.WaitGroup
+
+	wg.Add(1)
+	go listener.Start(RPC_URL, &s)
+	wg.Wait()
 }

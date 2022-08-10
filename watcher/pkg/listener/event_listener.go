@@ -10,13 +10,21 @@ import (
 	"github.com/ethereum/go-ethereum"
 	"github.com/ethereum/go-ethereum/accounts/abi"
 	"github.com/ethereum/go-ethereum/common"
+	"github.com/ethereum/go-ethereum/core/types"
 	"github.com/ethereum/go-ethereum/ethclient"
 )
 
 var rentalManagerAddress = common.HexToAddress("0xc01F341F646De5e7e9eE244Aa82cd4bF54f385Ec")
 var ABI_Fname = "RentalManager.json"
 
-func Historical_Filter(client *ethclient.Client) error {
+func newClient(URL string) *ethclient.Client {
+	client, e := ethclient.Dial(URL)
+	if e != nil {
+		log.Fatal("Error creating new client: e")
+	}
+	return client
+}
+func filterLogs(client *ethclient.Client, s *State, from int64, to int64) error {
 
 	f, e := os.Open(ABI_Fname)
 	if e != nil {
@@ -36,8 +44,8 @@ func Historical_Filter(client *ethclient.Client) error {
 	fmt.Println(block.Number())
 
 	filter := ethereum.FilterQuery{
-		FromBlock: big.NewInt(block.Number().Int64() - 1000),
-		ToBlock:   big.NewInt(block.Number().Int64()),
+		FromBlock: big.NewInt(from),
+		ToBlock:   big.NewInt(to),
 		Addresses: []common.Address{
 			rentalManagerAddress,
 		},
@@ -73,4 +81,42 @@ func Historical_Filter(client *ethclient.Client) error {
 	}
 
 	return nil
+}
+
+func simWS(headers chan *types.Header, URL string) {
+	client := newClient(URL)
+	current_head, err := client.HeaderByNumber(context.Background(), nil)
+	if err != nil {
+		log.Fatal(err)
+	}
+	headers <- current_head
+	client.Close()
+
+	for {
+		client := newClient(URL)
+		new_head, err := client.HeaderByNumber(context.Background(), nil)
+		if err != nil {
+			log.Fatal(err)
+		}
+		if new_head.Number.Int64() > current_head.Number.Int64() {
+			headers <- new_head
+			current_head = new_head
+		}
+		client.Close()
+	}
+}
+
+func Start(URL string, s *State) {
+	headers := make(chan *types.Header, 100)
+	go simWS(headers, URL)
+
+	for {
+		select {
+		// case err := <-sub.Err():
+		// 	log.Fatal(err)
+		case header := <-headers:
+			client := newClient(URL)
+			filterLogs(client, s, header.Number.Int64(), header.Number.Int64())
+		}
+	}
 }
