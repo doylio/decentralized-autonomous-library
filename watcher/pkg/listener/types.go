@@ -31,5 +31,5 @@ type RentalCreated struct {
 }
 
 type RentalAccepted struct {
-	ID uint
+	ID *big.Int
 }

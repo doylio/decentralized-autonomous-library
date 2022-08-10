@@ -2,6 +2,7 @@ package main
 
 import (
 	"sync"
+	"watcher/pkg/api"
 	"watcher/pkg/listener"
 )
 
@@ -18,5 +19,7 @@ func main() {
 
 	wg.Add(1)
 	go listener.Start(RPC_URL, &s)
+	wg.Add(1)
+	go api.StartAPI(&s)
 	wg.Wait()
 }
