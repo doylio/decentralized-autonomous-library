@@ -1,15 +1,17 @@
 import React, { useState } from "react";
 import { useSigner } from "wagmi";
-import { getRentalManager } from "../web3/contracts";
+import { getCatalogue, getRentalManager } from "../web3/contracts";
 import env from "../env.json";
 
 const ViewRequests = () => {
   const { data: signer } = useSigner();
   const [requests, setRequests] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [saving, setSaving] = useState(false);
   const [selectedRequestId, setSelectedRequestId] = useState(null);
   const [bond, setBond] = useState();
   const [fee, setFee] = useState();
+  const [hasCreatedTokens, setHasCreatedTokens] = useState(false);
 
   React.useEffect(() => {
     handleGetRequests();
@@ -19,8 +21,8 @@ const ViewRequests = () => {
     try {
       setLoading(true);
       const requests = await getRequests();
-      const relevantRequests = await filterRequestsInILS(requests);
-      setRequests(requests);
+      const relevantRequests = await parseAndFilterRequests(requests);
+      setRequests(relevantRequests);
       setLoading(false);
     } catch (err) {
       setLoading(false);
@@ -32,41 +34,99 @@ const ViewRequests = () => {
     return [
       {
         id: 1,
-        title: "Harry Potter and the Sorcerer's Stone",
-        isbn: 298347129838,
+        isbn: 1751763,
         quantity: 1,
       },
       {
         id: 2,
-        title: "The Hobbit",
         isbn: 9238748932,
         quantity: 2,
       },
     ];
   };
 
-  const filterRequestsInILS = async (requests) => {
+  const parseAndFilterRequests = async (requests) => {
     const res = await fetch(`${env.API_URL}/books`);
-    const books = await res.json();
-    console.log(books);
-    return requests;
+    const booksObj = await res.json();
+    const books = Object.values(booksObj);
+
+    let parsedRequests = [];
+    for (let i = 0; i < requests.length; i++) {
+      const book = books.find((b) => b.id === requests[i].isbn.toString());
+      if (!book) {
+        continue;
+      }
+      parsedRequests.push({
+        id: requests[i].id,
+        isbn: requests[i].isbn,
+        quantity: requests[i].quantity,
+        author: book.author,
+        title: book.title,
+      });
+    }
+    return parsedRequests;
   };
 
   const offerRental = async () => {
     try {
       const request = requests.find((r) => r.id === selectedRequestId);
-      setLoading(true);
+      setSaving(true);
+
       const tx = await getRentalManager()
         .connect(signer)
         .offerRental(request.id, request.quantity, bond, fee);
       await tx.wait();
-      setLoading(false);
+      setSaving(false);
       window.location = "/offer-success";
     } catch (err) {
-      setLoading(false);
+      setSaving(false);
       console.error(err);
     }
   };
+
+  const createTokens = async () => {
+    try {
+      const catalogue = getCatalogue();
+      const request = requests.find((r) => r.id === selectedRequestId);
+      const tokenExists = await catalogue
+        .connect(signer)
+        .doesBookExist(request.isbn);
+      let tx;
+      if (tokenExists) {
+        tx = await addSupply(request);
+      } else {
+        tx = await createAndSupply(request);
+      }
+      setSaving(true);
+      await tx.wait();
+      setSaving(false);
+      setHasCreatedTokens(true);
+    } catch (err) {
+      setSaving(false);
+      console.error(err);
+    }
+  };
+
+  const createAndSupply = async (request) => {
+    const catalogue = getCatalogue();
+    return catalogue
+      .connect(signer)
+      .createAndSupplyBooks(
+        [request.isbn],
+        [request.title],
+        [request.author],
+        [request.quantity]
+      );
+  };
+
+  const addSupply = async (request) => {
+    const catalogue = getCatalogue();
+    console.log(request);
+    return catalogue
+      .connect(signer)
+      .supplyBooks([request.isbn], [request.quantity]);
+  };
+
   return (
     <div>
       <h1>Requests for books from other libraries</h1>
@@ -103,34 +163,50 @@ const ViewRequests = () => {
           });
         })()}
       </div>
-      {selectedRequestId && (
-        <div>
-          <h2>Make an offer for this request</h2>
-          <label for="isbn">Bond: </label>
-          <input
-            type="text"
-            id="bond"
-            name="bond"
-            value={bond}
-            onChange={(ev) => setBond(ev.target.value)}
-          ></input>
-          <br />
-          <label for="quantity">Fee: </label>
-          <input
-            type="text"
-            id="fee"
-            name="fee"
-            value={fee}
-            onChange={(ev) => setFee(ev.target.value)}
-          ></input>
-          <br />
-          {signer ? (
+      {(() => {
+        if (!selectedRequestId) return null;
+        if (!signer) {
+          return <p>Connect wallet to make an offer</p>;
+        }
+        if (!hasCreatedTokens) {
+          return (
+            <div>
+              <h2>
+                To make an offer on this request, register your books on chain
+              </h2>
+              {saving ? (
+                "Saving..."
+              ) : (
+                <button onClick={createTokens}>Create Tokens</button>
+              )}
+            </div>
+          );
+        }
+        return (
+          <div>
+            <h2>Make an offer for this request</h2>
+            <label for="isbn">Bond: </label>
+            <input
+              type="text"
+              id="bond"
+              name="bond"
+              value={bond}
+              onChange={(ev) => setBond(ev.target.value)}
+            ></input>
+            <br />
+            <label for="quantity">Fee: </label>
+            <input
+              type="text"
+              id="fee"
+              name="fee"
+              value={fee}
+              onChange={(ev) => setFee(ev.target.value)}
+            ></input>
+            <br />
             <button onClick={() => offerRental()}>Offer Rental</button>
-          ) : (
-            <p>Connect wallet to make an offer</p>
-          )}
-        </div>
-      )}
+          </div>
+        );
+      })()}
     </div>
   );
 };

@@ -17,7 +17,6 @@ const ViewOffers = () => {
       const offers = await getOffers();
       setOffers(offers);
       setLoading(false);
-      window.location = "/accept-success";
     } catch (err) {
       setLoading(false);
       console.error(err);
@@ -50,7 +49,7 @@ const ViewOffers = () => {
       const rentalManager = getRentalManager();
       const tx = await rentalManager.connect(signer).acceptOffer(offerId);
       await tx.wait();
-      window.location.reload();
+      window.location = "/accept-success";
     } catch (err) {
       console.error(err);
     }
