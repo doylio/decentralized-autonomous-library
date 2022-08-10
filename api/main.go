@@ -2,13 +2,14 @@ package main
 
 import (
 	"api/pkg/ILS"
+	"sync"
 )
 
 func main() {
 
-	// var wg sync.WaitGroup
+	var wg sync.WaitGroup
 
-	// wg.Add(1)
+	wg.Add(1)
 	ILS.StartAPI()
-	// wg.Wait()
+	wg.Wait()
 }

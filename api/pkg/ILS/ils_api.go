@@ -108,9 +108,9 @@ func StartAPI() {
 
 	router := gin.Default()
 	router.GET("/books", GetBooks)
-	router.GET("/books/:id", getBookByID)
-	router.GET("/books/:author", getBookByAuther)
-	router.GET("/books/:barcode", getBookByBarcode)
+	router.GET("/bookByID/:id", getBookByID)
+	router.GET("/bookByAuthor/:author", getBookByAuther)
+	router.GET("/bookByBarcode/:barcode", getBookByBarcode)
 	router.POST("/books", PostBook)
 
 	router.Run("localhost:8080")
