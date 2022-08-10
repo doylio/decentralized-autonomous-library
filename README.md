@@ -1,5 +1,5 @@
 !['Logo'](Logo.png)
-#D.A.L. - Decentralized Autonomous Library
+# D.A.L. - Decentralized Autonomous Library
 Inter-Library Loans over The Blockchain
 ## Overview
 Public Libraries using something called Inter-Library Loans.  This is when one Public Libary System requests an item from another Public Library System.  Any search done on membership info, item data, etc is done through and ILS (Integrated Library System). There only is a handful of ILS software providers.
