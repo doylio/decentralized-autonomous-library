@@ -1,9 +1,26 @@
 import React from "react";
-import { ethers } from "ethers";
-import { useAccount } from "wagmi";
+import { useAccount, useConnect, useDisconnect } from "wagmi";
+import { InjectedConnector } from "wagmi/connectors/injected";
 
 export const WalletButton = () => {
-  function connectToWallet() {}
+  const { address } = useAccount();
+  const { connect } = useConnect({
+    connector: new InjectedConnector(),
+  });
+  const { disconnect } = useDisconnect();
 
-  return <button onClick={() => connectToWallet()}>Connect Wallet</button>;
+  if (address)
+    return (
+      <div
+        style={{
+          display: "flex",
+          alignItems: "flex-end",
+          flexDirection: "column",
+        }}
+      >
+        <div>Connected to {address}</div>
+        <button onClick={() => disconnect()}>Disconnect</button>
+      </div>
+    );
+  return <button onClick={() => connect()}>Connect Wallet</button>;
 };
