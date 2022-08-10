@@ -41,6 +41,7 @@ func loadBooks() error {
 
 // GetBooks responds with the list of all books as json
 func GetBooks(c *gin.Context) {
+	c.Header("Access-Control-Allow-Origin", "*")
 	c.IndentedJSON(http.StatusOK, books)
 }
 
@@ -55,6 +56,7 @@ func PostBook(c *gin.Context) {
 
 	// Add the new book to the slice
 	books[newBook.ID] = newBook
+	c.Header("Access-Control-Allow-Origin", "*")
 	c.IndentedJSON(http.StatusCreated, newBook)
 }
 
@@ -69,6 +71,7 @@ func getBookByID(c *gin.Context) {
 			return
 		}
 	}
+	c.Header("Access-Control-Allow-Origin", "*")
 	c.IndentedJSON(http.StatusNotFound, gin.H{"message": "book not found"})
 }
 
@@ -83,6 +86,7 @@ func getBookByAuther(c *gin.Context) {
 			return
 		}
 	}
+	c.Header("Access-Control-Allow-Origin", "*")
 	c.IndentedJSON(http.StatusNotFound, gin.H{"message": "book not found"})
 }
 
@@ -93,10 +97,12 @@ func getBookByBarcode(c *gin.Context) {
 	// a book whose ID value matches the parameter
 	for _, b := range books {
 		if b.Barcode == barcode {
+			c.Header("Access-Control-Allow-Origin", "*")
 			c.IndentedJSON(http.StatusOK, b)
 			return
 		}
 	}
+	c.Header("Access-Control-Allow-Origin", "*")
 	c.IndentedJSON(http.StatusNotFound, gin.H{"message": "book not found"})
 }
 
