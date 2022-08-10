@@ -5,32 +5,35 @@ class bookAuthor extends React.Component {
     super(props);
     this.state = {results:[]}
   }
+
+
   componentDidMount() {
     const qs = new URLSearchParams(window.location.search);
     const apiAuthorUrl = "http://localhost:8080/books";
     const apiBarcodeUrl = "http://localhost:8080/bookByBarcode";
     const apiTitleUrl = "http://localhost:8080/bookByTitle";
     const author_name = qs.get("author")
-    function searchArray(keyData) {
-      const results = keyData.filter((book)=> book.author.match(author_name))
-      console.log(results)
-      this.setState({results})
+    const searchArray = (keyData) => {
+      const results_array = keyData.filter((book)=> book.author.match(author_name))
+      console.log(results_array)
+      this.setState({results:results_array})
     }
+  
     fetch(apiAuthorUrl+``)
       .then((response) => response.json())
       .then((data) => console.log(
         searchArray(
-          Object.values(data)
-          //data
+          Object.values(data), data
         )
         )
         );
   }
   render() {
+    console.log(this.state.results)
     return (
     <div>
     <h1>my Component has Mounted, Check the browser 'console' </h1>
-    {this.state.results}
+    {this.state.results.toString()}
     </div>
     );
   }
