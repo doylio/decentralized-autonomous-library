@@ -48,7 +48,7 @@ const InternalSearch = () => {
         onClick={() => {
           const qs = new URLSearchParams();
           qs.append("author", authorname);
-          window.location.href = `http://localhost:3000/returnresults?${qs.toString()}`;
+          window.location.href = `/returnresults?${qs.toString()}`;
         }}
       >
         Search
