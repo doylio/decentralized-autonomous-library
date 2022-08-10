@@ -14,6 +14,8 @@ import (
 	"github.com/ethereum/go-ethereum/ethclient"
 )
 
+// when rental accepted, add to receiving ils, remove from sending ils
+
 var rentalManagerAddress = common.HexToAddress("0xc01F341F646De5e7e9eE244Aa82cd4bF54f385Ec")
 var ABI_Fname = "RentalManager.json"
 

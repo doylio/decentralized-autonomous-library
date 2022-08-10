@@ -1,0 +1,865 @@
+{ "1001745": {
+    "id": "1001745",
+    "location": "BFBeQ",
+    "status_codes": "REQUEST",
+    "barcode": "30890331224474",
+    "title": "Mastering Bitcoin",
+    "author": "Andreas A"
+  },
+  "1023761": {
+    "id": "1023761",
+    "location": "EZmuM",
+    "status_codes": "AVAILABLE",
+    "barcode": "79820452818754",
+    "title": "Mossad",
+    "author": "Shemar Gorczany"
+  },
+  "1157937": {
+    "id": "1157937",
+    "location": "EnuGX",
+    "status_codes": "MISSING",
+    "barcode": "83059152817563",
+    "title": "Zen & The Art of Motorcycle Maintenance",
+    "author": "Lorine Boehm"
+  },
+  "1165128": {
+    "id": "1165128",
+    "location": "cGRSE",
+    "status_codes": "AVAILABLE",
+    "barcode": "04693171939041",
+    "title": "Wealth of Nations, The",
+    "author": "Granville Kris"
+  },
+  "1168121": {
+    "id": "1168121",
+    "location": "HexVK",
+    "status_codes": "REQUEST",
+    "barcode": "05507462918920",
+    "title": "Cathedral and the Bazaar, The",
+    "author": "Orie Hahn"
+  },
+  "1169478": {
+    "id": "1169478",
+    "location": "jGXYm",
+    "status_codes": "MISSING",
+    "barcode": "52930684986777",
+    "title": "Journal of Economics, vol 106 No 3",
+    "author": "Anita MacGyver"
+  },
+  "1194657": {
+    "id": "1194657",
+    "location": "FRqSt",
+    "status_codes": "REQUEST",
+    "barcode": "60915059127635",
+    "title": "Down and Out in Paris & London",
+    "author": "Luis Mills"
+  },
+  "1309069": {
+    "id": "1309069",
+    "location": "LeCTq",
+    "status_codes": "MISSING",
+    "barcode": "78349635021246",
+    "title": "Burning Bright",
+    "author": "Constantin Fadel"
+  },
+  "1370662": {
+    "id": "1370662",
+    "location": "YvVmV",
+    "status_codes": "MISSING",
+    "barcode": "67458285278201",
+    "title": "Deceiver, The",
+    "author": "Yessenia Paucek"
+  },
+  "1452205": {
+    "id": "1452205",
+    "location": "EqIoS",
+    "status_codes": "REQUEST",
+    "barcode": "32289286968718",
+    "title": "20000 Leagues Under the Sea",
+    "author": "Moshe Sawayn"
+  },
+  "1455578": {
+    "id": "1455578",
+    "location": "bjBpe",
+    "status_codes": "MISSING",
+    "barcode": "12303808081462",
+    "title": "Aghal Paghal",
+    "author": "Karina Sawayn"
+  },
+  "1509521": {
+    "id": "1509521",
+    "location": "vosRM",
+    "status_codes": "REQUEST",
+    "barcode": "59500200908892",
+    "title": "We the Living",
+    "author": "Ulices Pfeffer"
+  },
+  "1589381": {
+    "id": "1589381",
+    "location": "WRasE",
+    "status_codes": "AVAILABLE",
+    "barcode": "19279134343558",
+    "title": "Jurassic Park",
+    "author": "Marcelo O'Conner"
+  },
+  "1614966": {
+    "id": "1614966",
+    "location": "ZPGPq",
+    "status_codes": "REQUEST",
+    "barcode": "44374244323198",
+    "title": "Hafasavnuk",
+    "author": "Estevan Spinka"
+  },
+  "1690665": {
+    "id": "1690665",
+    "location": "hYrgy",
+    "status_codes": "AVAILABLE",
+    "barcode": "65058941498910",
+    "title": "World's Greatest Trials, The",
+    "author": "Titus Braun"
+  },
+  "1708164": {
+    "id": "1708164",
+    "location": "GxxvA",
+    "status_codes": "REQUEST",
+    "barcode": "22633150147225",
+    "title": "More Tears to Cry",
+    "author": "Kenny Volkman"
+  },
+  "1741833": {
+    "id": "1741833",
+    "location": "sqjoh",
+    "status_codes": "REQUEST",
+    "barcode": "89111073911144",
+    "title": "Freedom at Midnight",
+    "author": "Larry Corkery"
+  },
+  "1751763": {
+    "id": "1751763",
+    "location": "GbkcT",
+    "status_codes": "MISSING",
+    "barcode": "25384541331216",
+    "title": "Birth of a Theorem",
+    "author": "Joy Kling"
+  },
+  "1768159": {
+    "id": "1768159",
+    "location": "IUknK",
+    "status_codes": "AVAILABLE",
+    "barcode": "26760024093048",
+    "title": "City of Joy, The",
+    "author": "Lottie Brekke"
+  },
+  "1856378": {
+    "id": "1856378",
+    "location": "foMNM",
+    "status_codes": "AVAILABLE",
+    "barcode": "86578947082908",
+    "title": "Talking Straight",
+    "author": "Caleigh Bradtke"
+  },
+  "2080988": {
+    "id": "2080988",
+    "location": "iVoVP",
+    "status_codes": "REQUEST",
+    "barcode": "46782946033398",
+    "title": "Idea of Justice, The",
+    "author": "Lucious Gorczany"
+  },
+  "2139106": {
+    "id": "2139106",
+    "location": "GrwAP",
+    "status_codes": "REQUEST",
+    "barcode": "05213043852148",
+    "title": "Doctor in the Nude",
+    "author": "Lola Bernier"
+  },
+  "2209034": {
+    "id": "2209034",
+    "location": "LMjmD",
+    "status_codes": "MISSING",
+    "barcode": "10997030466286",
+    "title": "Empire of the Mughal - Raiders from the North",
+    "author": "Aurelie O'Conner"
+  },
+  "2272712": {
+    "id": "2272712",
+    "location": "KXXaQ",
+    "status_codes": "MISSING",
+    "barcode": "02041020976297",
+    "title": "Empire of the Mughal - Ruler of the World",
+    "author": "Donavon Hartmann"
+  },
+  "2345672": {
+    "id": "2345672",
+    "location": "XAqZy",
+    "status_codes": "AVAILABLE",
+    "barcode": "82746655542456",
+    "title": "Electric Universe",
+    "author": "Rosanna Lueilwitz"
+  },
+  "2353754": {
+    "id": "2353754",
+    "location": "JVgYT",
+    "status_codes": "REQUEST",
+    "barcode": "17878239122596",
+    "title": "One",
+    "author": "Samanta Okuneva"
+  },
+  "2374349": {
+    "id": "2374349",
+    "location": "ilLYv",
+    "status_codes": "AVAILABLE",
+    "barcode": "49712359382082",
+    "title": "Uncommon Wisdom",
+    "author": "Karley Kohler"
+  },
+  "2376411": {
+    "id": "2376411",
+    "location": "HkjfE",
+    "status_codes": "REQUEST",
+    "barcode": "52065332310427",
+    "title": "Hunchback of Notre Dame, The",
+    "author": "Flavie Roob"
+  },
+  "2519252": {
+    "id": "2519252",
+    "location": "LdSgU",
+    "status_codes": "AVAILABLE",
+    "barcode": "24637792664188",
+    "title": "Empire of the Mughal - The Serpent's Tooth",
+    "author": "Mikel Lebsack"
+  },
+  "2546363": {
+    "id": "2546363",
+    "location": "vsfgz",
+    "status_codes": "REQUEST",
+    "barcode": "09170333454784",
+    "title": "Principles of Communication Systems",
+    "author": "Roel Bergnaum"
+  },
+  "2659466": {
+    "id": "2659466",
+    "location": "gxCAr",
+    "status_codes": "MISSING",
+    "barcode": "11144878567910",
+    "title": "From Beirut to Jerusalem",
+    "author": "Jada Cruickshank"
+  },
+  "2680005": {
+    "id": "2680005",
+    "location": "MfyZR",
+    "status_codes": "MISSING",
+    "barcode": "92428174642492",
+    "title": "Jim Corbett Omnibus",
+    "author": "Ottis Jaskolski"
+  },
+  "2736306": {
+    "id": "2736306",
+    "location": "OCsSt",
+    "status_codes": "AVAILABLE",
+    "barcode": "42003592204569",
+    "title": "New Markets & Other Essays",
+    "author": "Carmella Luettgen"
+  },
+  "2749350": {
+    "id": "2749350",
+    "location": "bRFxz",
+    "status_codes": "AVAILABLE",
+    "barcode": "32991420956968",
+    "title": "O Jerusalem!",
+    "author": "Jedediah Purdy"
+  },
+  "2754966": {
+    "id": "2754966",
+    "location": "BxCHR",
+    "status_codes": "REQUEST",
+    "barcode": "45474360956972",
+    "title": "Batman: The Long Halloween",
+    "author": "Jannie Grady"
+  },
+  "2769647": {
+    "id": "2769647",
+    "location": "jaBUl",
+    "status_codes": "REQUEST",
+    "barcode": "22287117712715",
+    "title": "New Machiavelli, The",
+    "author": "Talon Wunsch"
+  },
+  "2785758": {
+    "id": "2785758",
+    "location": "tHtrp",
+    "status_codes": "MISSING",
+    "barcode": "24891777736145",
+    "title": "Clash of Civilizations and Remaking of the World Order",
+    "author": "Ricardo Turcotte"
+  },
+  "2811254": {
+    "id": "2811254",
+    "location": "IEhVf",
+    "status_codes": "AVAILABLE",
+    "barcode": "17246810383072",
+    "title": "Tales of Beedle the Bard",
+    "author": "Zena Boehm"
+  },
+  "2878917": {
+    "id": "2878917",
+    "location": "Mnlkt",
+    "status_codes": "AVAILABLE",
+    "barcode": "66020039364918",
+    "title": "Analysis, Vol I",
+    "author": "Dena Bogisich"
+  },
+  "2913762": {
+    "id": "2913762",
+    "location": "FMGnc",
+    "status_codes": "REQUEST",
+    "barcode": "74068361042260",
+    "title": "Last Mughal, The",
+    "author": "Lester Jast"
+  },
+  "2968291": {
+    "id": "2968291",
+    "location": "VLyEO",
+    "status_codes": "AVAILABLE",
+    "barcode": "31974935483760",
+    "title": "Structure and Randomness",
+    "author": "Tomasa Mertz"
+  },
+  "2996967": {
+    "id": "2996967",
+    "location": "ntPld",
+    "status_codes": "MISSING",
+    "barcode": "71337253655766",
+    "title": "Machine Learning for Hackers",
+    "author": "Raleigh Beatty"
+  },
+  "3060178": {
+    "id": "3060178",
+    "location": "bkEfP",
+    "status_codes": "MISSING",
+    "barcode": "39528843672181",
+    "title": "Attorney, The",
+    "author": "Makenna Gottlieb"
+  },
+  "3077530": {
+    "id": "3077530",
+    "location": "WihOH",
+    "status_codes": "REQUEST",
+    "barcode": "35100293998607",
+    "title": "Trembling of a Leaf, The",
+    "author": "Jimmie Little"
+  },
+  "3211203": {
+    "id": "3211203",
+    "location": "jdctG",
+    "status_codes": "REQUEST",
+    "barcode": "99014904708019",
+    "title": "Discovery of India, The",
+    "author": "William Rutherford"
+  },
+  "3258219": {
+    "id": "3258219",
+    "location": "iXGcH",
+    "status_codes": "REQUEST",
+    "barcode": "53470698228720",
+    "title": "Data Structures Using C & C++",
+    "author": "Charles Wolff"
+  },
+  "3277084": {
+    "id": "3277084",
+    "location": "WOigM",
+    "status_codes": "MISSING",
+    "barcode": "14159439414770",
+    "title": "Think Complexity",
+    "author": "Mario Simonis"
+  },
+  "3344406": {
+    "id": "3344406",
+    "location": "DaoNW",
+    "status_codes": "AVAILABLE",
+    "barcode": "14584087048741",
+    "title": "Phantom of Manhattan, The",
+    "author": "Shane Roberts"
+  },
+  "3514059": {
+    "id": "3514059",
+    "location": "QXpTQ",
+    "status_codes": "MISSING",
+    "barcode": "62973881271409",
+    "title": "Case of the Lame Canary, The",
+    "author": "Wendell Barrows"
+  },
+  "3550761": {
+    "id": "3550761",
+    "location": "SHkKj",
+    "status_codes": "REQUEST",
+    "barcode": "07559012563858",
+    "title": "Russian Journal, A",
+    "author": "Mireya Mosciski"
+  },
+  "3607505": {
+    "id": "3607505",
+    "location": "zOXQn",
+    "status_codes": "REQUEST",
+    "barcode": "05681039121089",
+    "title": "To Sir With Love",
+    "author": "Addie Koepp"
+  },
+  "3617145": {
+    "id": "3617145",
+    "location": "WLSEn",
+    "status_codes": "MISSING",
+    "barcode": "16559568042775",
+    "title": "Structure & Interpretation of Computer Programs",
+    "author": "Jermain Emmerich"
+  },
+  "3690936": {
+    "id": "3690936",
+    "location": "DVCOu",
+    "status_codes": "MISSING",
+    "barcode": "19431902503328",
+    "title": "Pattern Classification",
+    "author": "Candelario Jacobs"
+  },
+  "3762230": {
+    "id": "3762230",
+    "location": "mwlMy",
+    "status_codes": "AVAILABLE",
+    "barcode": "96261664083518",
+    "title": "Econometric Analysis",
+    "author": "Samson Cummings"
+  },
+  "3894492": {
+    "id": "3894492",
+    "location": "TzULn",
+    "status_codes": "REQUEST",
+    "barcode": "45444615810695",
+    "title": "Code Book, The",
+    "author": "Martina Murazik"
+  },
+  "3929240": {
+    "id": "3929240",
+    "location": "VQItB",
+    "status_codes": "REQUEST",
+    "barcode": "84544017810820",
+    "title": "Killing Joke, The",
+    "author": "Immanuel Jakubowski"
+  },
+  "3973480": {
+    "id": "3973480",
+    "location": "NpWtP",
+    "status_codes": "AVAILABLE",
+    "barcode": "27165180031325",
+    "title": "Computer Vision, A Modern Approach",
+    "author": "Adolphus Adams"
+  },
+  "4021624": {
+    "id": "4021624",
+    "location": "RbSno",
+    "status_codes": "REQUEST",
+    "barcode": "62823303344556",
+    "title": "Complete Sherlock Holmes, The - Vol II",
+    "author": "Eldora Connelly"
+  },
+  "4039751": {
+    "id": "4039751",
+    "location": "gdlmb",
+    "status_codes": "MISSING",
+    "barcode": "28602272057359",
+    "title": "City of Djinns",
+    "author": "Jose Lehner"
+  },
+  "4045484": {
+    "id": "4045484",
+    "location": "vhPkc",
+    "status_codes": "REQUEST",
+    "barcode": "01817802285502",
+    "title": "Beyond the Three Seas",
+    "author": "Myah Hoppe"
+  },
+  "4047068": {
+    "id": "4047068",
+    "location": "JUEfj",
+    "status_codes": "MISSING",
+    "barcode": "95013893469494",
+    "title": "Power Electronics - Rashid",
+    "author": "Torey Pouros"
+  },
+  "4133519": {
+    "id": "4133519",
+    "location": "szLGw",
+    "status_codes": "AVAILABLE",
+    "barcode": "19104971573481",
+    "title": "Identity & Violence",
+    "author": "Heather Rempel"
+  },
+  "4182226": {
+    "id": "4182226",
+    "location": "CQfqG",
+    "status_codes": "AVAILABLE",
+    "barcode": "65862754304170",
+    "title": "Veteran, The",
+    "author": "Elisha Abbott"
+  },
+  "4275589": {
+    "id": "4275589",
+    "location": "vAMlc",
+    "status_codes": "REQUEST",
+    "barcode": "73128322215967",
+    "title": "Freakonomics",
+    "author": "Antwan Larson"
+  },
+  "4278617": {
+    "id": "4278617",
+    "location": "kCGzz",
+    "status_codes": "AVAILABLE",
+    "barcode": "37941692400394",
+    "title": "Complete Sherlock Holmes, The - Vol I",
+    "author": "Corene Treutel"
+  },
+  "4279039": {
+    "id": "4279039",
+    "location": "NvtbI",
+    "status_codes": "MISSING",
+    "barcode": "77503693723203",
+    "title": "Ashenden of The British Agent",
+    "author": "Odell Beahan"
+  },
+  "4288493": {
+    "id": "4288493",
+    "location": "usgce",
+    "status_codes": "REQUEST",
+    "barcode": "73984870589335",
+    "title": "Gun Gayin Awadi",
+    "author": "Oceane Cronin"
+  },
+  "4335386": {
+    "id": "4335386",
+    "location": "ZvLNs",
+    "status_codes": "MISSING",
+    "barcode": "58645256988232",
+    "title": "Flashpoint",
+    "author": "Mohammad Langosh"
+  },
+  "4359793": {
+    "id": "4359793",
+    "location": "qjbPF",
+    "status_codes": "REQUEST",
+    "barcode": "13354949750955",
+    "title": "Signal and the Noise, The",
+    "author": "Hillary Kshlerin"
+  },
+  "4374110": {
+    "id": "4374110",
+    "location": "FhbSa",
+    "status_codes": "AVAILABLE",
+    "barcode": "72918731261593",
+    "title": "Judge, The",
+    "author": "Eveline Howell"
+  },
+  "4392913": {
+    "id": "4392913",
+    "location": "dKFcj",
+    "status_codes": "AVAILABLE",
+    "barcode": "39994968936803",
+    "title": "Karl Marx Biography",
+    "author": "Karl Spencer"
+  },
+  "4518262": {
+    "id": "4518262",
+    "location": "ZVLNp",
+    "status_codes": "REQUEST",
+    "barcode": "90283611661496",
+    "title": "Maugham's Collected Short Stories, Vol 3",
+    "author": "Demond Gerlach"
+  },
+  "4551706": {
+    "id": "4551706",
+    "location": "uHjNR",
+    "status_codes": "AVAILABLE",
+    "barcode": "93557898307489",
+    "title": "Elements of Information Theory",
+    "author": "Destinee Doyle"
+  },
+  "4573124": {
+    "id": "4573124",
+    "location": "UyEdF",
+    "status_codes": "REQUEST",
+    "barcode": "78017490876671",
+    "title": "Girl who kicked the Hornet's Nest",
+    "author": "Dustin Altenwerth"
+  },
+  "4603106": {
+    "id": "4603106",
+    "location": "sNyth",
+    "status_codes": "REQUEST",
+    "barcode": "95185454469650",
+    "title": "Life in Letters, A",
+    "author": "Andre Kozey"
+  },
+  "4621572": {
+    "id": "4621572",
+    "location": "ZPcCK",
+    "status_codes": "REQUEST",
+    "barcode": "04136065920935",
+    "title": "Vyakti ani Valli",
+    "author": "Roy Sauer"
+  },
+  "4634173": {
+    "id": "4634173",
+    "location": "ImqdN",
+    "status_codes": "AVAILABLE",
+    "barcode": "29111066895647",
+    "title": "Christmas Carol, A",
+    "author": "Eldora Emmerich"
+  },
+  "4696300": {
+    "id": "4696300",
+    "location": "IpDDs",
+    "status_codes": "MISSING",
+    "barcode": "63191838777200",
+    "title": "Rationality & Freedom",
+    "author": "Marian Robel"
+  },
+  "4829746": {
+    "id": "4829746",
+    "location": "nsRha",
+    "status_codes": "MISSING",
+    "barcode": "84015473936896",
+    "title": "History of Western Philosophy",
+    "author": "Catherine Ruecker"
+  },
+  "4856452": {
+    "id": "4856452",
+    "location": "eFofO",
+    "status_codes": "MISSING",
+    "barcode": "46996436479872",
+    "title": "Radiowaril Bhashane & Shrutika",
+    "author": "Neoma Marquardt"
+  },
+  "4886948": {
+    "id": "4886948",
+    "location": "qeZhC",
+    "status_codes": "AVAILABLE",
+    "barcode": "53783592350216",
+    "title": "Data Smart",
+    "author": "Kenya Dickens"
+  },
+  "4909974": {
+    "id": "4909974",
+    "location": "PSCZr",
+    "status_codes": "REQUEST",
+    "barcode": "40502517869351",
+    "title": "God Created the Integers",
+    "author": "Valentina Kuhic"
+  },
+  "5006462": {
+    "id": "5006462",
+    "location": "zKMHv",
+    "status_codes": "AVAILABLE",
+    "barcode": "73920737694740",
+    "title": "Oxford book of Modern Science Writing",
+    "author": "Wade Schuster"
+  },
+  "5026047": {
+    "id": "5026047",
+    "location": "Lkueb",
+    "status_codes": "AVAILABLE",
+    "barcode": "75820528414109",
+    "title": "Dylan on Dylan",
+    "author": "Sandra Effertz"
+  },
+  "5066337": {
+    "id": "5066337",
+    "location": "YUGhE",
+    "status_codes": "MISSING",
+    "barcode": "57450433913565",
+    "title": "Winter of Our Discontent, The",
+    "author": "Blanche Kunze"
+  },
+  "5094633": {
+    "id": "5094633",
+    "location": "nprGj",
+    "status_codes": "MISSING",
+    "barcode": "22373716586416",
+    "title": "Drunkard's Walk, The",
+    "author": "Benton Legros"
+  },
+  "5277156": {
+    "id": "5277156",
+    "location": "LWgqS",
+    "status_codes": "MISSING",
+    "barcode": "36209456397285",
+    "title": "Philosophy: Who Needs It",
+    "author": "Conor O'Connell"
+  },
+  "5322024": {
+    "id": "5322024",
+    "location": "llPqC",
+    "status_codes": "MISSING",
+    "barcode": "75528168768737",
+    "title": "Idiot, The",
+    "author": "Daphney Mraz"
+  },
+  "5438978": {
+    "id": "5438978",
+    "location": "wUKpS",
+    "status_codes": "MISSING",
+    "barcode": "95924688676715",
+    "title": "Apulki",
+    "author": "Justina Beier"
+  },
+  "5557413": {
+    "id": "5557413",
+    "location": "WQWUB",
+    "status_codes": "AVAILABLE",
+    "barcode": "42765952544196",
+    "title": "Great War for Civilization, The",
+    "author": "Vivien Quigley"
+  },
+  "5581807": {
+    "id": "5581807",
+    "location": "iyGBn",
+    "status_codes": "AVAILABLE",
+    "barcode": "84112138825406",
+    "title": "Girl who played with Fire",
+    "author": "Louie Pfannerstill"
+  },
+  "5720573": {
+    "id": "5720573",
+    "location": "evlxj",
+    "status_codes": "AVAILABLE",
+    "barcode": "86231698745632",
+    "title": "Soft Computing & Intelligent Systems",
+    "author": "Theodore Gulgowski"
+  },
+  "5780669": {
+    "id": "5780669",
+    "location": "TOjlY",
+    "status_codes": "AVAILABLE",
+    "barcode": "01641169994263",
+    "title": "We the People",
+    "author": "Tracy Fadel"
+  },
+  "5800082": {
+    "id": "5800082",
+    "location": "RvBoS",
+    "status_codes": "REQUEST",
+    "barcode": "14482058572265",
+    "title": "Selected Short Stories",
+    "author": "Aglae Stanton"
+  },
+  "5881435": {
+    "id": "5881435",
+    "location": "qLeCV",
+    "status_codes": "REQUEST",
+    "barcode": "15220525119613",
+    "title": "Artist and the Mathematician, The",
+    "author": "Lois Fisher"
+  },
+  "5894299": {
+    "id": "5894299",
+    "location": "MLrOG",
+    "status_codes": "REQUEST",
+    "barcode": "07904799400879",
+    "title": "Data Analysis with Open Source Tools",
+    "author": "Rossie Hane"
+  },
+  "5895506": {
+    "id": "5895506",
+    "location": "jrsOl",
+    "status_codes": "REQUEST",
+    "barcode": "69398735700933",
+    "title": "Data Scientists at Work",
+    "author": "Glen Schinner"
+  },
+  "5984580": {
+    "id": "5984580",
+    "location": "DahrK",
+    "status_codes": "REQUEST",
+    "barcode": "78831415502599",
+    "title": "Arthashastra, The",
+    "author": "Shirley Stokes"
+  },
+  "6079903": {
+    "id": "6079903",
+    "location": "zQyDQ",
+    "status_codes": "AVAILABLE",
+    "barcode": "89461754895551",
+    "title": "Crisis on Infinite Earths",
+    "author": "Chelsea Stoltenberg"
+  },
+  "6093921": {
+    "id": "6093921",
+    "location": "dchJd",
+    "status_codes": "MISSING",
+    "barcode": "34483228509647",
+    "title": "Bookless in Baghdad",
+    "author": "Elian Leffler"
+  },
+  "6129140": {
+    "id": "6129140",
+    "location": "HxorY",
+    "status_codes": "MISSING",
+    "barcode": "65636286655437",
+    "title": "Beautiful and the Damned, The",
+    "author": "Guido Cole"
+  },
+  "6134427": {
+    "id": "6134427",
+    "location": "KgcAa",
+    "status_codes": "MISSING",
+    "barcode": "90028358456046",
+    "title": "Numbers Behind Numb3rs, The",
+    "author": "Foster Hauck"
+  },
+  "6143953": {
+    "id": "6143953",
+    "location": "jknKN",
+    "status_codes": "REQUEST",
+    "barcode": "04440562708886",
+    "title": "Crime and Punishment",
+    "author": "Darrel Grant"
+  },
+  "6218385": {
+    "id": "6218385",
+    "location": "rXhva",
+    "status_codes": "MISSING",
+    "barcode": "59408699464541",
+    "title": "Surely You're Joking Mr Feynman",
+    "author": "Shana Oberbrunner"
+  },
+  "6226794": {
+    "id": "6226794",
+    "location": "IuWCj",
+    "status_codes": "AVAILABLE",
+    "barcode": "77320100032743",
+    "title": "Dongri to Dubai",
+    "author": "Kiel Morar"
+  },
+  "6266504": {
+    "id": "6266504",
+    "location": "CofVl",
+    "status_codes": "REQUEST",
+    "barcode": "73919078167554",
+    "title": "Last Lecture, The",
+    "author": "Lemuel Mayer"
+  },
+  "6335149": {
+    "id": "6335149",
+    "location": "eQNqg",
+    "status_codes": "MISSING",
+    "barcode": "64957321557946",
+    "title": "Fundamentals of Wavelets",
+    "author": "Hassie Johnston"
+  },
+  "6357864": {
+    "id": "6357864",
+    "location": "TgLKU",
+    "status_codes": "MISSING",
+    "barcode": "05131451075860",
+    "title": "Broca's Brain",
+    "author": "Willow Huel"
+  }
+}
