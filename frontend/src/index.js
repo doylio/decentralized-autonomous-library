@@ -8,27 +8,33 @@ import ViewOffers from "./pages/ViewOffers";
 import ViewRequests from "./pages/ViewRequests";
 import CreateRequest from "./pages/CreateRequest";
 import MarkReturn from "./pages/MarkReturn";
+import CreateRequestSuccess from "./pages/CreateSuccess";
 import NoPage from "./pages/NoPage";
-// import { Provider } from "wagmi";
+import { WagmiConfig } from "wagmi";
+import { client } from "./web3";
 
 export default function App() {
   return (
-    // <Provider>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="internalsearch" element={<InternalSearch />} />
-          <Route path="returnresults" element={<ReturnResults />} />
-          <Route path="viewoffers" element={<ViewOffers />} />
-          <Route path="viewrequests" element={<ViewRequests />} />
-          <Route path="createrequest" element={<CreateRequest />} />
-          <Route path="markreturn" element={<MarkReturn />} />
-          <Route path="*" element={<NoPage />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
-    // </Provider>
+    <WagmiConfig client={client}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="internalsearch" element={<InternalSearch />} />
+            <Route path="returnresults" element={<ReturnResults />} />
+            <Route path="viewoffers" element={<ViewOffers />} />
+            <Route path="viewrequests" element={<ViewRequests />} />
+            <Route path="createrequest" element={<CreateRequest />} />
+            <Route path="markreturn" element={<MarkReturn />} />
+            <Route
+              path="create-request-success"
+              element={<CreateRequestSuccess />}
+            />
+            <Route path="*" element={<NoPage />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </WagmiConfig>
   );
 }
 
