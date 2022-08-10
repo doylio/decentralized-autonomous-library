@@ -5,8 +5,9 @@
     "license": "MIT",
     "scripts": {
         "prettier": "prettier --write 'contracts/**/*.sol'",
-        "compile": "hardhat compile",
-        "test": "hardhat test ./test/**/*.test.ts"
+        "compile": "hardhat compile --network hardhat",
+        "test": "hardhat test ./test/**/*.test.ts",
+        "events": "hardhat run ./scripts/testActions.ts --network metis"
     },
     "dependencies": {
         "@hashgraph/sdk": "^2.17.1",
