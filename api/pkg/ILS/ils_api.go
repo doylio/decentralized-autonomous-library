@@ -72,6 +72,34 @@ func getBookByID(c *gin.Context) {
 	c.IndentedJSON(http.StatusNotFound, gin.H{"message": "book not found"})
 }
 
+func getBookByAuther(c *gin.Context) {
+	author := c.Param("author")
+
+	// Loop over the list of books looking for
+	// a book whose ID value matches the parameter
+	for _, b := range books {
+		if b.Author == author {
+			c.IndentedJSON(http.StatusOK, b)
+			return
+		}
+	}
+	c.IndentedJSON(http.StatusNotFound, gin.H{"message": "book not found"})
+}
+
+func getBookByBarcode(c *gin.Context) {
+	barcode := c.Param("barcode")
+
+	// Loop over the list of books looking for
+	// a book whose ID value matches the parameter
+	for _, b := range books {
+		if b.Barcode == barcode {
+			c.IndentedJSON(http.StatusOK, b)
+			return
+		}
+	}
+	c.IndentedJSON(http.StatusNotFound, gin.H{"message": "book not found"})
+}
+
 func StartAPI() {
 	e := loadBooks()
 	if e != nil {
@@ -81,6 +109,8 @@ func StartAPI() {
 	router := gin.Default()
 	router.GET("/books", GetBooks)
 	router.GET("/books/:id", getBookByID)
+	router.GET("/books/:author", getBookByAuther)
+	router.GET("/books/:barcode", getBookByBarcode)
 	router.POST("/books", PostBook)
 
 	router.Run("localhost:8080")
