@@ -1,4 +1,6 @@
 import React from "react";
+import JSONViewer from 'react-json-viewer';
+
 
 class bookAuthor extends React.Component {
   constructor(props) {
@@ -28,12 +30,28 @@ class bookAuthor extends React.Component {
         )
         );
   }
+  
   render() {
     console.log(this.state.results)
+    const json_data = this.state.results.map(
+      book => ({
+        Author: book.author,
+        Title: book.title,
+        Status: book.status_codes,
+        Location: book.location,
+        ISBN: book.barcode
+      })
+    )
     return (
     <div>
-    <h1>my Component has Mounted, Check the browser 'console' </h1>
-    {this.state.results.toString()}
+    <h1>Search Results</h1>
+    
+    <JSONViewer
+        json={json_data}
+      />
+    <h2>No Results? <a href="http://localhost:3000/createrequest">Request Books</a></h2>
+    <h2>No Results? <a href="http://localhost:3000/viewoffers">View Book Offers</a></h2>
+
     </div>
     );
   }
