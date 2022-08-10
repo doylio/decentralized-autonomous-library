@@ -27,19 +27,14 @@ This is the interface that Librarian would use when:
 
 ## ILS API
 This is a RESTful API that makes calls to an ILS, to get item information:
-
-    - There are URIs for searching by ISBN(barcode), Author, Title
-
-    - Used to verify item status (Available/Not Available/etc)
+ - There are URIs for searching by ISBN(barcode), Author, Title
+ - Used to verify item status (Available/Not Available/etc)
 
 ## WATCHER
 Watches for events in the contracts on-chain and communicates with it.
-
-    - Scans for blocks as they're mined for events from the contract
-
-    - Parses events from the contract and serves them over an API
-
-    - Detects a "RentalAccepted" event and adds the book to another library
+ - Scans for blocks as they're mined for events from the contract
+ - Parses events from the contract and serves them over an API
+ - Detects a "RentalAccepted" event and adds the book to another library
 
 
 ## CONTRACTS
