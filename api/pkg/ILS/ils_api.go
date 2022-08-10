@@ -82,6 +82,7 @@ func getBookByAuther(c *gin.Context) {
 	// a book whose ID value matches the parameter
 	for _, b := range books {
 		if b.Author == author {
+			c.Header("Access-Control-Allow-Origin", "*")
 			c.IndentedJSON(http.StatusOK, b)
 			return
 		}
