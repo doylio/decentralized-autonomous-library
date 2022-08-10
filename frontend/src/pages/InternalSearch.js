@@ -1,6 +1,9 @@
 import React from "react";
 import { useState } from 'react';
 import ReactDOM from "react-dom/client";
+import ReturnResults from "./ReturnResults";
+import {Route} from 'react-router-dom'
+import { Redirect, useLocation } from 'react-router-dom';
 
 
 const InternalSearch = () => {
@@ -24,7 +27,13 @@ const InternalSearch = () => {
       <br></br>
       <button
         type="button"
-        onClick={setBarcode} //function to go to page results page
+        onClick={()=>{
+          //<Redirect to={location}/>
+          window.location.href = "http://localhost:3000/returnresults"
+          
+          //<Redirect to="/returnresults" />
+          //this.props.history.push('returnresults')//#take me to a page
+        }} //{setBarcode} //function to go to page results page
       >Search</button>
     </div>
     
