@@ -16,7 +16,7 @@ const InternalSearch = () => {
     <div>
       <h1>Internal Search</h1>
       <br></br>
-      <label for="barcode">ISBN: </label>
+      {/* <label for="barcode">ISBN: </label>
       <input
         type="text"
         id="barcode"
@@ -33,7 +33,7 @@ const InternalSearch = () => {
         value={itemtitle}
         onChange={(ev) => setItemTitle(ev.target.value)}
       ></input>
-      <br></br>
+      <br></br> */}
       <label for="authorname">Author : </label>
       <input
         type="text"
@@ -46,12 +46,10 @@ const InternalSearch = () => {
       <button
         type="button"
         onClick={() => {
-          //<Redirect to={location}/>
-          window.location.href = "http://localhost:3000/returnresults";
-
-          //<Redirect to="/returnresults" />
-          //this.props.history.push('returnresults')//#take me to a page
-        }} //{setBarcode} //function to go to page results page
+          const qs = new URLSearchParams();
+          qs.append("author", authorname);
+          window.location.href = `http://localhost:3000/returnresults?${qs.toString()}`;
+        }}
       >
         Search
       </button>
