@@ -36,5 +36,11 @@ Watches for events in the contracts on-chain and communicates with it.
  - Parses events from the contract and serves them over an API
  - Detects a "RentalAccepted" event and adds the book to another library
 
-
 ## CONTRACTS
+### Catalogue.sol
+- Creates ERC1155 tokens 
+- Uses book metadata for the token
+
+RentalManager
+
+
