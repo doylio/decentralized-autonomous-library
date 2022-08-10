@@ -6,7 +6,7 @@ import (
 	"log"
 	"net/http"
 	"os"
-
+	"fmt"
 	"github.com/gin-gonic/gin"
 )
 
@@ -75,10 +75,14 @@ func getBookByID(books map[string]book) gin.HandlerFunc {
 
 // postBook adds a book from JSON received in the request body
 func postBook(books map[string]book) gin.HandlerFunc {
-	fn := func(c *gin.Context) {
+	fn := func(c *gin.Context) {		
 		var b = c.Param("book")
-		var newBook book
+		fmt.Println(b)
+		newBook := book{}
+		x, _ := ioutil.ReadAll(c.Request.Body)
+		
 		json.Unmarshal([]byte(b), &newBook)
+		fmt.Println(newBook)
 		// Call BindJSON to bind the recieved json to newBook
 		if err := c.BindJSON(&newBook); err != nil {
 			return
@@ -135,7 +139,7 @@ func StartAPI(port string, fname string) {
 	router.GET("/bookByID/:id", getBookByID(books))
 	// router.GET("/bookByAuthor/:author", getBookByAuther)
 	// router.GET("/bookByBarcode/:barcode", getBookByBarcode)
-	router.POST("/books/:book", postBook(books))
+	router.POST("/books", postBook(books))
 
 	go router.Run("localhost:" + port)
 }
