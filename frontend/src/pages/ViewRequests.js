@@ -45,7 +45,12 @@ const ViewRequests = () => {
     ];
   };
 
-  const filterRequestsInILS = async (requests) => {};
+  const filterRequestsInILS = async (requests) => {
+    const res = await fetch(`${env.API_URL}/books`);
+    const books = await res.json();
+    console.log(books);
+    return requests;
+  };
 
   const offerRental = async () => {
     try {
