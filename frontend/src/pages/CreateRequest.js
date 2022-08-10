@@ -1,6 +1,6 @@
 import React from "react";
 import { getRentalManager } from "../web3/contracts";
-import { useSigner, useConnect } from "wagmi";
+import { useSigner } from "wagmi";
 
 const CreateRequest = () => {
   const { data: signer } = useSigner();

@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-import { useSigner } from "wagmi";
+import { useAccount, useSigner } from "wagmi";
 import { getCatalogue, getRentalManager } from "../web3/contracts";
-import env from "../env.json";
+import { ethers } from "ethers";
+import { getBooks, getRequests } from "../api";
 
 const ViewRequests = () => {
   const { data: signer } = useSigner();
+  const { data: account } = useAccount();
   const [requests, setRequests] = useState([]);
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
@@ -30,36 +32,23 @@ const ViewRequests = () => {
     }
   };
 
-  const getRequests = async () => {
-    return [
-      {
-        id: 1,
-        isbn: 1751763,
-        quantity: 1,
-      },
-      {
-        id: 2,
-        isbn: 9238748932,
-        quantity: 2,
-      },
-    ];
-  };
-
   const parseAndFilterRequests = async (requests) => {
-    const res = await fetch(`${env.API_URL}/books`);
-    const booksObj = await res.json();
-    const books = Object.values(booksObj);
+    const books = await getBooks();
 
     let parsedRequests = [];
     for (let i = 0; i < requests.length; i++) {
-      const book = books.find((b) => b.id === requests[i].isbn.toString());
+      if (requests[i].Renter === account) {
+        // Skip our own requests
+        continue;
+      }
+      const book = books.find((b) => b.id === requests[i].ISBN.toString());
       if (!book) {
         continue;
       }
       parsedRequests.push({
-        id: requests[i].id,
-        isbn: requests[i].isbn,
-        quantity: requests[i].quantity,
+        id: requests[i].ID,
+        isbn: requests[i].ISBN,
+        quantity: requests[i].Quantity,
         author: book.author,
         title: book.title,
       });
@@ -74,7 +63,12 @@ const ViewRequests = () => {
 
       const tx = await getRentalManager()
         .connect(signer)
-        .offerRental(request.id, request.quantity, bond, fee);
+        .offerRental(
+          request.id,
+          request.quantity,
+          ethers.utils.parseEther(bond),
+          ethers.utils.parseEther(fee)
+        );
       await tx.wait();
       setSaving(false);
       window.location = "/offer-success";
