@@ -40,7 +40,11 @@ Watches for events in the contracts on-chain and communicates with it.
 ### Catalogue.sol
 - Creates ERC1155 tokens 
 - Uses book metadata for the token
-
-RentalManager
+### RentalManager.sol
+- Creates requests for items/books
+- Tracks item status for requests (offered, accepted, rejected, returned)
+- Tracks renters, ISBN, and quantity
+- Offers rentals of items based of ISBN, quantity, and a bond/fee offered by the requesters/offerers
+- Accepts offers made for items listed in the catalogue
 
 
