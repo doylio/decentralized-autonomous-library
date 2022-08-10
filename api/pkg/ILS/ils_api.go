@@ -55,35 +55,41 @@ func GetBooks(books map[string]book) gin.HandlerFunc {
 	return gin.HandlerFunc(fn)
 }
 
-// // postBook adds a book from JSON received in the request body
-// func PostBook(c *gin.Context) {
-// 	var newBook book
+func getBookByID(books map[string]book) gin.HandlerFunc {
+	fn := func(c *gin.Context) {
+		id := c.Param("id")
 
-// 	// Call BindJSON to bind the recieved json to newBook
-// 	if err := c.BindJSON(&newBook); err != nil {
-// 		return
-// 	}
+		// Loop over the list of books looking for
+		// a book whose ID value matches the parameter
+		for i, b := range books {
+			if i == id {
+				c.IndentedJSON(http.StatusOK, b)
+				return
+			}
+		}
+		c.Header("Access-Control-Allow-Origin", "*")
+		c.IndentedJSON(http.StatusNotFound, gin.H{"message": "book not found"})
+	}
+	return fn
+}
 
-// 	// Add the new book to the slice
-// 	books[newBook.ID] = newBook
-// 	c.Header("Access-Control-Allow-Origin", "*")
-// 	c.IndentedJSON(http.StatusCreated, newBook)
-// }
+// postBook adds a book from JSON received in the request body
+func PostBook(books map[string]book) gin.HandlerFunc {
+	fn := func(c *gin.Context) {
+		var newBook book
 
-// func getBookByID(c *gin.Context) {
-// 	id := c.Param("id")
+		// Call BindJSON to bind the recieved json to newBook
+		if err := c.BindJSON(&newBook); err != nil {
+			return
+		}
 
-// 	// Loop over the list of books looking for
-// 	// a book whose ID value matches the parameter
-// 	for i, b := range books {
-// 		if i == id {
-// 			c.IndentedJSON(http.StatusOK, b)
-// 			return
-// 		}
-// 	}
-// 	c.Header("Access-Control-Allow-Origin", "*")
-// 	c.IndentedJSON(http.StatusNotFound, gin.H{"message": "book not found"})
-// }
+		// Add the new book to the slice
+		books[newBook.ID] = newBook
+		c.Header("Access-Control-Allow-Origin", "*")
+		c.IndentedJSON(http.StatusCreated, newBook)
+	}
+	return fn
+}
 
 // func getBookByAuther(c *gin.Context) {
 // 	author := c.Param("author")
@@ -125,10 +131,10 @@ func StartAPI(port string, fname string) {
 
 	router := gin.Default()
 	router.GET("/books", GetBooks(books))
-	// router.GET("/bookByID/:id", getBookByID)
+	router.GET("/bookByID/:id", getBookByID(books))
 	// router.GET("/bookByAuthor/:author", getBookByAuther)
 	// router.GET("/bookByBarcode/:barcode", getBookByBarcode)
-	// router.POST("/books", PostBook)
+	router.POST("/books", PostBook(books))
 
 	go router.Run("localhost:" + port)
 }

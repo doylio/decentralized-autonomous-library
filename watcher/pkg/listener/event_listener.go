@@ -61,11 +61,10 @@ func filterLogs(client *ethclient.Client, s *State, from int64, to int64) error 
 	fmt.Printf("Found %d logs created between blocks %d -> %d by %s\n", len(logs), filter.FromBlock, filter.ToBlock, filter.Addresses)
 
 	for _, vLog := range logs {
-		fmt.Println("LOG: ", vLog)
+		// fmt.Println("LOG: ", vLog)
 		event, e := RentalManagerAbi.Unpack("RequestCreated", vLog.Data)
 		h := common.HexToHash("0x41612386090d3716f01a2fa2e0e5b436c89d4479f1bd27e2644fe2ebad825cfe")
 		if vLog.Topics[0] == h && e == nil {
-			fmt.Println("EVENT LEN: ", len(event))
 			fmt.Println("RequestCreated: ", event)
 			newRequestCreated := RequestCreated{}
 			newRequestCreated.ID = event[0].(*big.Int)
@@ -75,13 +74,11 @@ func filterLogs(client *ethclient.Client, s *State, from int64, to int64) error 
 			s.Lock.Lock()
 			s.RequestsCreated[newRequestCreated.ID.String()] = newRequestCreated
 			s.Lock.Unlock()
-			fmt.Println("OBJECT: ", newRequestCreated)
 			continue
 		}
 
 		event, e = RentalManagerAbi.Unpack("RentalCreated", vLog.Data)
 		if len(event) == 6 && e == nil {
-			fmt.Println("EVENT LEN: ", len(event))
 			fmt.Println("RentalCreated: ", event)
 			newRentalCreated := RentalCreated{}
 			newRentalCreated.ID = event[0].(*big.Int)
@@ -93,7 +90,6 @@ func filterLogs(client *ethclient.Client, s *State, from int64, to int64) error 
 			s.Lock.Lock()
 			s.RentalsCreated[newRentalCreated.ID.String()] = newRentalCreated
 			s.Lock.Unlock()
-			fmt.Println("OBJECT: ", newRentalCreated)
 			continue
 		}
 		event, e = RentalManagerAbi.Unpack("RentalAccepted", vLog.Data)
@@ -105,6 +101,7 @@ func filterLogs(client *ethclient.Client, s *State, from int64, to int64) error 
 			s.Lock.Lock()
 			s.RentalsAccepted[newRentalAccepted.ID.String()] = newRentalAccepted
 			s.Lock.Unlock()
+			addToILS(newRentalAccepted.ID, s)
 			continue
 		} else {
 			fmt.Println("Error unpacking logs: ", e)
