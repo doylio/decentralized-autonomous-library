@@ -1,5 +1,5 @@
 !['Logo'](Logo.png)
-# The D.A.L. 
+# D.A.L. - Decentralized Autonomous Library
 Inter-Library Loans over The Blockchain
 ## Overview
 Public Libraries using something called Inter-Library Loans.  This is when one Public Libary System requests an item from another Public Library System.  Any search done on membership info, item data, etc is done through and ILS (Integrated Library System). There only is a handful of ILS software providers.
@@ -8,6 +8,7 @@ These vendors often run on slow, expensive, and outdated software because they k
 
 This becomes especially handy when one library loans out their materials to another library. By using the DAL, we can allow these organizations to track an item's Title, Author, Availability, and other metadata along their supply chain.
 
+<<<<<<< HEAD
 When items are on chain, tracking the movement of these items can also help libraries gather useful statistics about items in their system.  It also allows them to provide access to their items on a much larger geographical scale to help boost their circulation numbers.
 
 Due to their privacy-centric nature, libraries serve as a trust-point for their members and the larger community.

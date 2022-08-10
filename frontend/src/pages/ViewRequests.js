@@ -6,7 +6,7 @@ import { getBooks, getRequests } from "../api";
 
 const ViewRequests = () => {
   const { data: signer } = useSigner();
-  const { data: account } = useAccount();
+  const { address } = useAccount();
   const [requests, setRequests] = useState([]);
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
@@ -37,7 +37,7 @@ const ViewRequests = () => {
 
     let parsedRequests = [];
     for (let i = 0; i < requests.length; i++) {
-      if (requests[i].Renter === account) {
+      if (requests[i].Renter.toLowerCase() === address.toLowerCase()) {
         // Skip our own requests
         continue;
       }
