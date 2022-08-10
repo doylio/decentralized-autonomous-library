@@ -51,7 +51,6 @@ class bookAuthor extends React.Component {
       />
     <h2>No Results? <a href="http://localhost:3000/createrequest">Request Books</a></h2>
     <h2>No Results? <a href="http://localhost:3000/viewoffers">View Book Offers</a></h2>
-
     </div>
     );
   }
