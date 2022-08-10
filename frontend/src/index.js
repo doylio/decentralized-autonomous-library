@@ -9,10 +9,11 @@ import ViewRequests from "./pages/ViewRequests";
 import CreateRequest from "./pages/CreateRequest";
 import MarkReturn from "./pages/MarkReturn";
 import NoPage from "./pages/NoPage";
-
+// import { Provider } from "wagmi";
 
 export default function App() {
   return (
+    // <Provider>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
@@ -27,8 +28,9 @@ export default function App() {
         </Route>
       </Routes>
     </BrowserRouter>
+    // </Provider>
   );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<App />);

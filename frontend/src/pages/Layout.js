@@ -1,9 +1,13 @@
 import { Outlet, Link } from "react-router-dom";
+import { WalletButton } from "../components/WalletButton";
 
 const Layout = () => {
   return (
     <>
       <nav>
+        <div style={{ float: "right" }}>
+          <WalletButton />
+        </div>
         <ul>
           <li>
             <Link to="/">Home</Link>
@@ -31,7 +35,7 @@ const Layout = () => {
 
       <Outlet />
     </>
-  )
+  );
 };
 
 export default Layout;
