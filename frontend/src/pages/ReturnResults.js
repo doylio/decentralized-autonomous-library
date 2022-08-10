@@ -6,7 +6,8 @@ class bookAuthor extends React.Component {
     const apiAuthorUrl = "http://localhost:8080/bookByAuthor";
     const apiBarcodeUrl = "http://localhost:8080/bookByBarcode";
     const apiTitleUrl = "http://localhost:8080/bookByTitle";
-    fetch(apiAuthorUrl+"/"+qs.get(bookAuthor))
+    const author_name = qs.get("author")
+    fetch(apiAuthorUrl+`/${author_name}`)
       .then((response) => response.json())
       .then((data) => console.log("This is your data", data));
   }
