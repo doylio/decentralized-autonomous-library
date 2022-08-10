@@ -1,9 +1,11 @@
 import React, { useState } from "react";
-import { useSigner } from "wagmi";
+import { useAccount, useSigner } from "wagmi";
 import { getRentalManager } from "../web3/contracts";
+import { getAccepts, getOffers, getRequests } from "../api";
 
 const ViewOffers = () => {
   const { data: signer } = useSigner();
+  const { data: account } = useAccount();
   const [offers, setOffers] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -15,6 +17,9 @@ const ViewOffers = () => {
     try {
       setLoading(true);
       const offers = await getOffers();
+      const requests = await getRequests();
+      const accepts = await getAccepts();
+      const parsedOffers = parseAndFilterOffers(requests, offers, accepts);
       setOffers(offers);
       setLoading(false);
     } catch (err) {
@@ -23,25 +28,15 @@ const ViewOffers = () => {
     }
   };
 
-  const getOffers = async () => {
-    return [
-      {
-        id: 1,
-        title: "Harry Potter and the Sorcerer's Stone",
-        isbn: 298347129838,
-        quantity: 1,
-        fee: 10,
-        bond: 30,
-      },
-      {
-        id: 2,
-        title: "The Hobbit",
-        isbn: 9238748932,
-        quantity: 2,
-        fee: 10,
-        bond: 40,
-      },
-    ];
+  const parseAndFilterOffers = (requests, offers, accepts) => {
+    const myRequests = requests.filter((req) => req.Renter === account);
+    const myOffers = offers.filter((offer) =>
+      myRequests.some((req) => req.ID === offer.RequestID)
+    );
+    const myUnfulfilledOffers = myOffers.filter(
+      (offer) => !accepts.some((accept) => accept.OfferID === offer.ID)
+    );
+    return {};
   };
 
   async function acceptOffer(offerId) {
