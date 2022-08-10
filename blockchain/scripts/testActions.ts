@@ -7,7 +7,7 @@ import {
 import addresses from "./addresses.json";
 
 async function main() {
-    const [lib1, lib2] = await ethers.getSigners();
+    const [tor, mtl] = await ethers.getSigners();
     const rentalManager = RentalManager__factory.connect(
         addresses.rentalManager,
         ethers.provider
@@ -18,7 +18,7 @@ async function main() {
         ethers.provider
     );
 
-    const ISBN = 4909974;
+    const ISBN = 3762230;
     const name = "NAME";
     const author = "AUTHOR";
     const bond = ethers.utils.parseEther("10");
@@ -26,11 +26,11 @@ async function main() {
 
     const requestId = await rentalManager.requestCount();
     console.log(`Library 1 making request...`);
-    let tx = await rentalManager.connect(lib1).createRequest(ISBN, 1);
+    let tx = await rentalManager.connect(tor).createRequest(ISBN, 1);
 
     console.log(`Library 2 adding to catalogue...`);
     tx = await catalogue
-        .connect(lib2)
+        .connect(mtl)
         .createAndSupplyBooks([ISBN], [name], [author], [1]);
     await tx.wait();
 
@@ -42,7 +42,7 @@ async function main() {
 
     console.log(`Library 2 making offer on request...`);
     const rentalId = await rentalManager.rentalCount();
-    tx = await rentalManager.connect(lib2).offerRental(requestId, 1, bond, fee);
+    tx = await rentalManager.connect(mtl).offerRental(requestId, 1, bond, fee);
     await tx.wait();
 
     // console.log(`Library 1 approved USDC...`);
@@ -52,7 +52,7 @@ async function main() {
     // await tx.wait();
 
     console.log(`Library 1 accepts request...`);
-    tx = await rentalManager.connect(lib1).acceptOffer(rentalId);
+    tx = await rentalManager.connect(tor).acceptOffer(rentalId);
     await tx.wait();
 
     // console.log(`Library 1 approving book for transfers...`);
@@ -62,7 +62,7 @@ async function main() {
     // await tx.wait();
 
     console.log(`Library 2 marks the book as returned...`);
-    tx = await rentalManager.connect(lib2).rentalReturned(rentalId);
+    tx = await rentalManager.connect(mtl).rentalReturned(rentalId);
     await tx.wait();
 }
 

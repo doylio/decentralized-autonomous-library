@@ -7,17 +7,7 @@ def item_session(host_uri, session_token):
     item_headers = {'Accept': 'application/json', 'Authorization': 'Bearer ' + session_token,'ContentType':'application/json'}
     return item_url, item_headers
 
-def item_verify():
-  return
 
-def item_data():
-  return
-
-def item_checkout():
-  return
-
-def item_return():
-  return
 
 def item_create(item_json, item_uri, item_headers):
     #item_object = json.load(item_json)
