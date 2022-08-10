@@ -18,7 +18,7 @@ async function main() {
         ethers.provider
     );
 
-    const ISBN = Math.floor(Math.random() * 100000000);
+    const ISBN = 4909974;
     const name = "NAME";
     const author = "AUTHOR";
     const bond = ethers.utils.parseEther("10");
