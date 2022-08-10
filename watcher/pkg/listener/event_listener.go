@@ -24,6 +24,7 @@ func newClient(URL string) *ethclient.Client {
 	}
 	return client
 }
+
 func filterLogs(client *ethclient.Client, s *State, from int64, to int64) error {
 
 	f, e := os.Open(ABI_Fname)
@@ -44,7 +45,7 @@ func filterLogs(client *ethclient.Client, s *State, from int64, to int64) error 
 	fmt.Println(block.Number())
 
 	filter := ethereum.FilterQuery{
-		FromBlock: big.NewInt(from - 1000),
+		FromBlock: big.NewInt(from),
 		ToBlock:   big.NewInt(to),
 		Addresses: []common.Address{
 			rentalManagerAddress,
@@ -58,9 +59,11 @@ func filterLogs(client *ethclient.Client, s *State, from int64, to int64) error 
 	fmt.Printf("Found %d logs created between blocks %d -> %d by %s\n", len(logs), filter.FromBlock, filter.ToBlock, filter.Addresses)
 
 	for _, vLog := range logs {
-
+		fmt.Println("LOG: ", vLog)
 		event, e := RentalManagerAbi.Unpack("RequestCreated", vLog.Data)
-		if e == nil {
+		h := common.HexToHash("0x41612386090d3716f01a2fa2e0e5b436c89d4479f1bd27e2644fe2ebad825cfe")
+		if vLog.Topics[0] == h && e == nil {
+			fmt.Println("EVENT LEN: ", len(event))
 			fmt.Println("RequestCreated: ", event)
 			newRequestCreated := RequestCreated{}
 			newRequestCreated.ID = event[0].(*big.Int)
@@ -75,7 +78,8 @@ func filterLogs(client *ethclient.Client, s *State, from int64, to int64) error 
 		}
 
 		event, e = RentalManagerAbi.Unpack("RentalCreated", vLog.Data)
-		if e == nil {
+		if len(event) == 6 && e == nil {
+			fmt.Println("EVENT LEN: ", len(event))
 			fmt.Println("RentalCreated: ", event)
 			newRentalCreated := RentalCreated{}
 			newRentalCreated.ID = event[0].(*big.Int)
@@ -86,12 +90,13 @@ func filterLogs(client *ethclient.Client, s *State, from int64, to int64) error 
 			newRentalCreated.Fee = event[5].(*big.Int)
 			s.Lock.Lock()
 			s.RentalsCreated[newRentalCreated.ID.String()] = newRentalCreated
+			s.Lock.Unlock()
 			fmt.Println("OBJECT: ", newRentalCreated)
 			continue
 		}
-
 		event, e = RentalManagerAbi.Unpack("RentalAccepted", vLog.Data)
-		if e == nil {
+		h = common.HexToHash("0xbb054fc27ca92df9daf234d8d116c57ba206cacd56e383ad6b38f107a1d7e30a")
+		if vLog.Topics[0] == h && e == nil {
 			fmt.Println("RentalAccepted: ", event)
 			newRentalAccepted := RentalAccepted{}
 			newRentalAccepted.ID = event[0].(*big.Int)
