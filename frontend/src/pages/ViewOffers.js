@@ -1,11 +1,13 @@
 import React, { useState } from "react";
-import { useAccount, useSigner } from "wagmi";
+import { useAccount, useSigner, useProvider } from "wagmi";
 import { getRentalManager } from "../web3/contracts";
-import { getAccepts, getOffers, getRequests } from "../api";
+import { getAccepts, getBooks, getOffers, getRequests } from "../api";
+import { getTitleFromCatalogue } from "../web3";
+import { BigNumber, ethers } from "ethers";
 
 const ViewOffers = () => {
   const { data: signer } = useSigner();
-  const { data: account } = useAccount();
+  const { address } = useAccount();
   const [offers, setOffers] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -19,8 +21,12 @@ const ViewOffers = () => {
       const offers = await getOffers();
       const requests = await getRequests();
       const accepts = await getAccepts();
-      const parsedOffers = parseAndFilterOffers(requests, offers, accepts);
-      setOffers(offers);
+      const parsedOffers = await parseAndFilterOffers(
+        requests,
+        offers,
+        accepts
+      );
+      setOffers(parsedOffers);
       setLoading(false);
     } catch (err) {
       setLoading(false);
@@ -29,14 +35,28 @@ const ViewOffers = () => {
   };
 
   const parseAndFilterOffers = (requests, offers, accepts) => {
-    const myRequests = requests.filter((req) => req.Renter === account);
+    const myRequests = requests.filter(
+      (req) => req.Renter.toLowerCase() === address.toLowerCase()
+    );
     const myOffers = offers.filter((offer) =>
       myRequests.some((req) => req.ID === offer.RequestID)
     );
     const myUnfulfilledOffers = myOffers.filter(
-      (offer) => !accepts.some((accept) => accept.OfferID === offer.ID)
+      (offer) => !accepts.some((accept) => accept.ID === offer.ID)
     );
-    return {};
+    const promises = myUnfulfilledOffers.map(async (offer) => {
+      const request = myRequests.find((req) => req.ID === offer.RequestID);
+      const title = await getTitleFromCatalogue(request.ISBN);
+      return {
+        id: offer.ID,
+        isbn: request.ISBN,
+        quantity: offer.Quantity,
+        title,
+        fee: ethers.utils.formatEther(offer.Fee.toString()),
+        bond: ethers.utils.formatEther(offer.Bond.toString()),
+      };
+    });
+    return Promise.all(promises);
   };
 
   async function acceptOffer(offerId) {
@@ -80,10 +100,10 @@ const ViewOffers = () => {
                 <strong>Quantity:</strong> {offer.quantity}
               </div>
               <div>
-                <strong>Fee:</strong> {offer.fee}
+                <strong>Fee:</strong> $ {offer.fee}
               </div>
               <div>
-                <strong>Bond:</strong> {offer.bond}
+                <strong>Bond:</strong> $ {offer.bond}
               </div>
             </div>
           ));

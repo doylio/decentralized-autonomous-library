@@ -1,4 +1,5 @@
 import env from "./env.json";
+import { getCatalogue } from "./web3/contracts";
 
 export const getBooks = async () => {
   const res = await fetch(`${env.API_URL}/books`);

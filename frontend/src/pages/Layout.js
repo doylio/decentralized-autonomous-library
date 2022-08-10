@@ -1,5 +1,6 @@
 import { Outlet, Link } from "react-router-dom";
 import { WalletButton } from "../components/WalletButton";
+import env from "../env.json";
 
 const Layout = () => {
   return (
@@ -8,6 +9,7 @@ const Layout = () => {
         <div style={{ float: "right" }}>
           <WalletButton />
         </div>
+        <h1>{env.TITLE}</h1>
         <ul>
           <li>
             <Link to="/">Home</Link>
@@ -26,9 +28,6 @@ const Layout = () => {
           </li>
           <li>
             <Link to="/createrequest">Create Request for Book</Link>
-          </li>
-          <li>
-            <Link to="/markreturn">Mark a Book as Returned</Link>
           </li>
         </ul>
       </nav>
