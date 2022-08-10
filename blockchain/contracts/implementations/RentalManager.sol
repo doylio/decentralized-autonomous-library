@@ -92,9 +92,9 @@ contract RentalManager {
         rentals[_rentalId].status = RentalStatus.Returned;
 
         // Return the bond
-        IERC20(paymentToken).transferFrom(address(this), request.renter, rental.bond);
+        IERC20(paymentToken).transfer(request.renter, rental.bond);
         // Pay the fee
-        IERC20(paymentToken).transferFrom(address(this), rental.loaner, rental.fee);
+        IERC20(paymentToken).transfer(rental.loaner, rental.fee);
         // Return the token
         ICatalogue(catalogue).safeTransferFrom(request.renter, rental.loaner, request.ISBN, rental.quantity, "");
 

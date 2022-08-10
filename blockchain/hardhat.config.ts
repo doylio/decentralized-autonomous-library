@@ -2,7 +2,8 @@ import { HardhatUserConfig } from "hardhat/config";
 import "@nomicfoundation/hardhat-toolbox";
 require("dotenv").config();
 
-const DEPLOYER_PRIVATE_KEY = process.env.DEPLOYER_PRIVATE_KEY;
+const primaryPrivKey = process.env.PRIMARY_PRIVATE_KEY;
+const secondaryPrivKey = process.env.SECONDARY_PRIVATE_KEY;
 
 const config: HardhatUserConfig = {
     solidity: "0.8.9",
@@ -10,7 +11,7 @@ const config: HardhatUserConfig = {
         hardhat: {},
         metis: {
             url: "https://stardust.metis.io/?owner=588",
-            accounts: [`0x${DEPLOYER_PRIVATE_KEY}`],
+            accounts: [`0x${primaryPrivKey}`, `0x${secondaryPrivKey}`],
         },
     },
 };
