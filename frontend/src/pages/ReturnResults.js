@@ -15,10 +15,6 @@ class bookAuthor extends React.Component {
       const results = keyData.filter((book)=> book.author.match(author_name))
       console.log(results)
       this.setState({results})
-      //for (const bookList in keyData) {
-      //  console.log(keyData[bookList].filter(author_name))
-      //}
-      //keyData.filter(author_name);
     }
     fetch(apiAuthorUrl+``)
       .then((response) => response.json())
@@ -29,7 +25,6 @@ class bookAuthor extends React.Component {
         )
         )
         );
-      //.then();
   }
   render() {
     return (
@@ -41,16 +36,3 @@ class bookAuthor extends React.Component {
   }
 }
 export default bookAuthor;
-
-/*
-const ReturnResults = () => {
-    return (
-    <div>
-    <h1>Return Results</h1>
-
-    </div>
-    );
-  };
-  
-  export default ReturnResults;
-  */
