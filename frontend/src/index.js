@@ -9,6 +9,8 @@ import ViewRequests from "./pages/ViewRequests";
 import CreateRequest from "./pages/CreateRequest";
 import MarkReturn from "./pages/MarkReturn";
 import CreateRequestSuccess from "./pages/CreateSuccess";
+import OfferSuccess from "./pages/OfferSuccess";
+import AcceptSuccess from "./pages/AcceptSuccess";
 import NoPage from "./pages/NoPage";
 import { WagmiConfig } from "wagmi";
 import { client } from "./web3";
@@ -30,6 +32,8 @@ export default function App() {
               path="create-request-success"
               element={<CreateRequestSuccess />}
             />
+            <Route path="offer-success" element={<OfferSuccess />} />
+            <Route path="accept-success" element={<AcceptSuccess />} />
             <Route path="*" element={<NoPage />} />
           </Route>
         </Routes>
