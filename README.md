@@ -21,19 +21,25 @@ Through our D.A.L. a Librarian:
 
 ## FRONTEND
 This is the interface that Librarian would use when:
-    - Searching for items and their locally or on-chain
-    - Respond to other libraries requests for items
-    - Request items for their own library
+ - Searching for items and their locally or on-chain
+ - Respond to other libraries requests for items
+ - Request items for their own library
 
 ## ILS API
 This is a RESTful API that makes calls to an ILS, to get item information:
+
     - There are URIs for searching by ISBN(barcode), Author, Title
+
     - Used to verify item status (Available/Not Available/etc)
 
 ## WATCHER
 Watches for events in the contracts on-chain and communicates with it.
+
     - Scans for blocks as they're mined for events from the contract
+
     - Parses events from the contract and serves them over an API
+
     - Detects a "RentalAccepted" event and adds the book to another library
+
 
 ## CONTRACTS
