@@ -1,4 +1,5 @@
 !['Logo'](Logo.png)
+!['Blockchain Futurist Conference 2022 semi-finalist'](2022.png)
 # D.A.L. - Decentralized Autonomous Library
 Inter-Library Loans over The Blockchain
 ## Overview
